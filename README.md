@@ -1,58 +1,36 @@
-# 🚢 Utopia of the Seas — MAX Cruise Guide
+# Utopia of the Seas MAX Guide
 
-**Sailing:** June 29 – July 3, 2026  
-**Ship:** Utopia of the Seas (Oasis Class)  
-**Route:** 4-Night Bahamas & Perfect Day from Port Canaveral  
-**Ports:** Orlando → Nassau → Perfect Day at CocoCay → Sea Day → Orlando
+Exact sailing guide for the June 29, 2026 to July 3, 2026 Utopia of the Seas cruise from Port Canaveral.
 
----
+## Deliverables
 
-## What's Inside
+The repo now includes a 10-page JPG set:
 
-This is a comprehensive, research-backed cruise guide with **6+ pages** of content:
+- `01-cover-itinerary.jpg`
+- `02-schedule-days-1-2.jpg`
+- `03-schedule-days-3-4.jpg`
+- `04-secret-spots.jpg`
+- `05-ship-map.jpg`
+- `06-dining-guide.jpg`
+- `07-insider-tips.jpg`
+- `08-contests-games.jpg`
+- `09-port-days.jpg`
+- `10-quick-reference.jpg`
 
-| Section | Contents |
-|---------|----------|
-| **Itinerary** | Exact dates, times, and port details for your sailing |
-| **Daily Schedule** | Hour-by-hour maximized schedule for all 4 nights |
-| **Ship Map** | Deck-by-deck breakdown + 6 secret hidden spots |
-| **Dining Guide** | Every restaurant with hours, costs, and hacks |
-| **Tips & Secrets** | Money-saving hacks, crowd avoidance, hidden gems |
-| **Contests & Games** | Duck hunt, trivia, escape rooms, casino tournaments |
-| **Port Deep Dives** | Nassau & CocoCay — free and paid options |
-| **Quick Reference** | Ship stats, key times, essential apps |
+It also includes `index.html` if you want the same content in one browser-friendly guide.
 
----
+## What is covered
 
-## Research Sources
+- Exact itinerary for the June 29 to July 3 sailing
+- Maximized daily schedule
+- Ship map and secret spots
+- Dining guide
+- Insider tips and money-saving hacks
+- Contests, duck hunt notes, and trivia angles
+- Nassau and CocoCay port planning
+- Quick-reference ship stats and key times
 
-- [Royal Caribbean Official Site](https://www.royalcaribbean.com)
-- [Royal Caribbean Blog (Matt Hochberg)](https://www.royalcaribbeanblog.com)
-- [Cruise Critic Forums](https://boards.cruisecritic.com)
-- [Reddit r/royalcaribbean](https://reddit.com/r/royalcaribbean)
-- [Undercover Tourist](https://www.undercovertourist.com)
-- [CruiseMapper Deck Plans](https://www.cruisemapper.com)
+## Notes
 
----
-
-## How to Use
-
-1. Open `index.html` in any browser
-2. Use the sticky nav to jump to any section
-3. Screenshot or print pages for offline use onboard
-4. Check the Royal Caribbean app once aboard for exact show times
-
----
-
-## Highlights for This Sailing
-
-- 🏝️ **Perfect Day at CocoCay** — Royal Caribbean's private island (July 1)
-- 🎭 **Aqua80Too** — 80s-themed AquaTheater show
-- ⛸️ **Youtopia** — Ice skating spectacular
-- 🎪 **All IN!** — Broadway-style production
-- 🚂 **Royal Railway** — First-ever train dining at sea
-- 🦜 **Pesky Parrot** — New tropical bar on Promenade
-
----
-
-*Unofficial fan guide. Verify all info with Royal Caribbean before sailing.*
+- This is an unofficial fan guide.
+- Show times and onboard activities can shift, so verify final timings in the Royal Caribbean app once onboard.
