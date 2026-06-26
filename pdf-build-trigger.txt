@@ -1,0 +1,1 @@
+Trigger PDF build for current JPG guide pages.
