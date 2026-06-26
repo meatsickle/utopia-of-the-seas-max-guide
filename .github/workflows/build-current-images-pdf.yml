@@ -1,0 +1,56 @@
+name: Build current images PDF
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Build PDF from current JPG pages
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+
+          files = [
+              '01-cover-itinerary.jpg',
+              '02-schedule-days-1-2.jpg',
+              '03-schedule-days-3-4.jpg',
+              '04-secret-spots.jpg',
+              '05-ship-map.jpg',
+              '06-dining-guide.jpg',
+              '07-insider-tips.jpg',
+              '08-contests-games.jpg',
+              '09-port-days.jpg',
+              '10-quick-reference.jpg',
+          ]
+
+          missing = [f for f in files if not Path(f).exists()]
+          if missing:
+              raise SystemExit(f'Missing expected image files: {missing}')
+
+          images = []
+          for f in files:
+              img = Image.open(f)
+              if img.mode != 'RGB':
+                  img = img.convert('RGB')
+              images.append(img)
+
+          output = 'utopia-current-images.pdf'
+          images[0].save(output, save_all=True, append_images=images[1:], resolution=150.0, quality=95)
+          print(f'Created {output} from {len(images)} JPG files')
+          PY
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: utopia-current-images-pdf
+          path: utopia-current-images.pdf
+          if-no-files-found: error
