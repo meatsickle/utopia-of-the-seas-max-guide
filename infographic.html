@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia of the Seas Infographic | June 29 - July 3, 2026</title>
+    <style>
+        :root {
+            --navy: #06111f;
+            --navy-2: #0b2138;
+            --blue: #1396ff;
+            --cyan: #63d6ff;
+            --gold: #f4be63;
+            --cream: #fff8ea;
+            --teal: #21d4c7;
+            --coral: #ff7a5c;
+            --pink: #ff5fb2;
+            --white: #f5fbff;
+            --muted: #9ec3db;
+            --line: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 1800px;
+            min-height: 6400px;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(19, 150, 255, 0.28), transparent 28%),
+                radial-gradient(circle at 92% 16%, rgba(255, 95, 178, 0.14), transparent 22%),
+                linear-gradient(180deg, #04101b 0%, #08213a 17%, #0a2037 55%, #05111c 100%);
+            color: var(--white);
+            font-family: "Trebuchet MS", "Avenir Next Condensed", "Segoe UI", sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.24;
+            pointer-events: none;
+        }
+
+        .wrap {
+            position: relative;
+            width: 1800px;
+            min-height: 6400px;
+            padding: 46px;
+        }
+
+        .frame {
+            position: relative;
+            min-height: 6300px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 34px;
+            overflow: hidden;
+            background:
+                linear-gradient(180deg, rgba(6, 17, 31, 0.55), rgba(6, 17, 31, 0.84)),
+                radial-gradient(circle at top right, rgba(99, 214, 255, 0.11), transparent 25%);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+        }
+
+        .section {
+            position: relative;
+            padding: 40px 54px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(99, 214, 255, 0.45);
+            color: var(--cyan);
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero {
+            padding: 54px;
+            background:
+                radial-gradient(circle at right top, rgba(19, 150, 255, 0.18), transparent 26%),
+                linear-gradient(135deg, rgba(11, 33, 56, 0.95), rgba(7, 36, 63, 0.72));
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 126px;
+            line-height: 0.92;
+            text-transform: uppercase;
+            text-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 34px;
+            line-height: 1.34;
+            color: #d7edf9;
+            max-width: 980px;
+        }
+
+        .date-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .chip {
+            padding: 11px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--cream);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .ship-card,
+        .stats-card,
+        .panel,
+        .route-card,
+        .day-card,
+        .port-card,
+        .secret-card,
+        .matrix-card,
+        .deck-card {
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.045);
+            backdrop-filter: blur(8px);
+        }
+
+        .ship-card {
+            position: relative;
+            padding: 34px 28px 28px;
+            overflow: hidden;
+            min-height: 440px;
+        }
+
+        .ship-illustration {
+            position: absolute;
+            right: -34px;
+            bottom: -8px;
+            width: 600px;
+            height: 260px;
+            opacity: 0.96;
+        }
+
+        .wave {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 90px;
+            background:
+                radial-gradient(circle at 12% 60%, rgba(99, 214, 255, 0.42), transparent 18%),
+                radial-gradient(circle at 33% 40%, rgba(19, 150, 255, 0.24), transparent 16%),
+                radial-gradient(circle at 68% 55%, rgba(99, 214, 255, 0.24), transparent 18%),
+                linear-gradient(180deg, rgba(16, 76, 128, 0), rgba(16, 76, 128, 0.5));
+        }
+
+        .ship-label {
+            position: relative;
+            z-index: 2;
+            max-width: 320px;
+        }
+
+        .ship-label h3 {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .ship-label p {
+            font-size: 24px;
+            line-height: 1.42;
+            color: #c9e5f3;
+        }
+
+        .stats-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .stats-card {
+            padding: 24px 18px;
+            text-align: center;
+        }
+
+        .stats-card .num {
+            font-size: 56px;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            color: var(--cyan);
+        }
+
+        .stats-card .label {
+            font-size: 20px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .section-title h2 {
+            font-size: 78px;
+            text-transform: uppercase;
+        }
+
+        .section-title .sub {
+            font-size: 28px;
+            color: var(--muted);
+            max-width: 760px;
+            line-height: 1.3;
+        }
+
+        .route-card {
+            padding: 28px;
+        }
+
+        .route-line {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .stop {
+            position: relative;
+            padding: 26px 20px 24px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(19, 150, 255, 0.1), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(99, 214, 255, 0.18);
+        }
+
+        .stop::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -21px;
+            width: 24px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyan), rgba(99, 214, 255, 0.2));
+        }
+
+        .stop:last-child::after {
+            display: none;
+        }
+
+        .stop .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .stop .day {
+            color: var(--gold);
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .stop .place {
+            font-size: 34px;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stop .time {
+            color: var(--cyan);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .day-card {
+            padding: 28px;
+            min-height: 520px;
+        }
+
+        .day-card h3 {
+            font-size: 44px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .day-card .mini {
+            font-size: 24px;
+            color: var(--cyan);
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .agenda {
+            display: grid;
+            gap: 10px;
+        }
+
+        .agenda-item {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .agenda-item:last-child {
+            border-bottom: 0;
+        }
+
+        .agenda-item .time {
+            color: var(--cyan);
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .agenda-item .text {
+            font-size: 24px;
+            line-height: 1.28;
+        }
+
+        .visual-band {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 20px;
+        }
+
+        .deck-map {
+            display: grid;
+            gap: 12px;
+        }
+
+        .deck-card {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 14px;
+            padding: 18px 22px;
+            align-items: center;
+        }
+
+        .deck-card .deck-name {
+            font-size: 32px;
+            color: var(--gold);
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        }
+
+        .deck-card .deck-detail {
+            font-size: 23px;
+            line-height: 1.32;
+            color: #ddf0fb;
+        }
+
+        .secret-stack {
+            display: grid;
+            gap: 16px;
+        }
+
+        .secret-card {
+            padding: 20px 24px;
+            background: linear-gradient(180deg, rgba(244, 190, 99, 0.09), rgba(255, 255, 255, 0.04));
+        }
+
+        .secret-card h4 {
+            font-size: 34px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .secret-card p {
+            margin: 0;
+            font-size: 23px;
+            line-height: 1.36;
+            color: #f5fafc;
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .matrix-card {
+            padding: 24px;
+            min-height: 320px;
+        }
+
+        .matrix-card h3 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: var(--cyan);
+        }
+
+        .matrix-card ul {
+            margin: 0;
+            padding-left: 24px;
+            font-size: 24px;
+            line-height: 1.48;
+        }
+
+        .matrix-card li + li {
+            margin-top: 8px;
+        }
+
+        .food-row,
+        .port-grid,
+        .games-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .food-row {
+            grid-template-columns: 1.15fr 0.85fr;
+        }
+
+        .panel {
+            padding: 26px;
+        }
+
+        .panel h3 {
+            font-size: 44px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .panel p,
+        .panel li {
+            font-size: 24px;
+            line-height: 1.4;
+            color: #eef8ff;
+        }
+
+        .food-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .food-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .food-item:last-child {
+            border-bottom: 0;
+        }
+
+        .food-item .name {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .food-item .tag {
+            font-size: 18px;
+            font-weight: 700;
+            color: #06111f;
+            background: var(--teal);
+            padding: 7px 11px;
+            border-radius: 999px;
+            align-self: start;
+        }
+
+        .games-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .game-box {
+            padding: 22px;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .game-box .icon {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .game-box h4 {
+            font-size: 30px;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+
+        .game-box p {
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.34;
+        }
+
+        .port-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .port-card {
+            padding: 26px;
+            min-height: 560px;
+        }
+
+        .port-card h3 {
+            font-size: 50px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .port-card .meta {
+            color: var(--cyan);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .mini-panel {
+            padding: 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mini-panel h4 {
+            font-size: 26px;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+
+        .mini-panel ul {
+            margin: 0;
+            padding-left: 22px;
+            font-size: 22px;
+            line-height: 1.45;
+        }
+
+        .footer {
+            padding: 30px 54px 42px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 22px;
+        }
+
+        .footer strong {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="frame">
+            <section class="hero">
+                <div class="eyebrow">Exact Sailing / June 29 to July 3, 2026 / Port Canaveral</div>
+                <div class="hero-grid">
+                    <div>
+                        <h1>Utopia<br>Maxed Out</h1>
+                        <p>A visual one-shot infographic for the exact Utopia of the Seas sailing: Port Canaveral to Nassau to Perfect Day at CocoCay to a final sea day sprint.</p>
+                        <div class="date-row">
+                            <div class="chip">🚢 Utopia of the Seas</div>
+                            <div class="chip">4 Nights</div>
+                            <div class="chip">Bahamas + CocoCay</div>
+                            <div class="chip">Return July 3</div>
+                        </div>
+                        <div class="stats-strip">
+                            <div class="stats-card">
+                                <div class="num">18</div>
+                                <div class="label">Decks</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="num">17</div>
+                                <div class="label">Slides</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="num">40+</div>
+                                <div class="label">Food + Drink Spots</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="num">5668</div>
+                                <div class="label">Guests Max</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ship-card">
+                        <div class="ship-label">
+                            <h3>World's Biggest Weekend</h3>
+                            <p>Short cruise, giant ship, no room for wasted hours. This layout prioritizes the exact route, the high-value windows, and the hidden ship zones that most people miss.</p>
+                        </div>
+                        <svg class="ship-illustration" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="hull" x1="0" x2="1">
+                                    <stop offset="0%" stop-color="#08213a"/>
+                                    <stop offset="100%" stop-color="#0e4b81"/>
+                                </linearGradient>
+                                <linearGradient id="tower" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#f8fbff"/>
+                                    <stop offset="100%" stop-color="#d1e9f8"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M88 186 L408 186 L560 152 L590 152 L588 182 L156 208 L102 205 Z" fill="url(#hull)" stroke="#63d6ff" stroke-opacity="0.35"/>
+                            <rect x="154" y="84" width="286" height="95" rx="12" fill="url(#tower)" opacity="0.95"/>
+                            <rect x="188" y="62" width="198" height="26" rx="8" fill="#dff3ff" opacity="0.95"/>
+                            <rect x="194" y="48" width="108" height="18" rx="6" fill="#f4be63"/>
+                            <rect x="214" y="28" width="18" height="22" rx="3" fill="#f4be63"/>
+                            <rect x="238" y="26" width="18" height="24" rx="3" fill="#f4be63"/>
+                            <g fill="#1396ff" opacity="0.78">
+                                <rect x="176" y="98" width="18" height="10" rx="2"/>
+                                <rect x="200" y="98" width="18" height="10" rx="2"/>
+                                <rect x="224" y="98" width="18" height="10" rx="2"/>
+                                <rect x="248" y="98" width="18" height="10" rx="2"/>
+                                <rect x="272" y="98" width="18" height="10" rx="2"/>
+                                <rect x="296" y="98" width="18" height="10" rx="2"/>
+                                <rect x="320" y="98" width="18" height="10" rx="2"/>
+                                <rect x="344" y="98" width="18" height="10" rx="2"/>
+                                <rect x="368" y="98" width="18" height="10" rx="2"/>
+                                <rect x="392" y="98" width="18" height="10" rx="2"/>
+                                <rect x="176" y="114" width="18" height="10" rx="2"/>
+                                <rect x="200" y="114" width="18" height="10" rx="2"/>
+                                <rect x="224" y="114" width="18" height="10" rx="2"/>
+                                <rect x="248" y="114" width="18" height="10" rx="2"/>
+                                <rect x="272" y="114" width="18" height="10" rx="2"/>
+                                <rect x="296" y="114" width="18" height="10" rx="2"/>
+                                <rect x="320" y="114" width="18" height="10" rx="2"/>
+                                <rect x="344" y="114" width="18" height="10" rx="2"/>
+                                <rect x="368" y="114" width="18" height="10" rx="2"/>
+                                <rect x="392" y="114" width="18" height="10" rx="2"/>
+                            </g>
+                            <path d="M420 84 Q456 78 476 64 Q500 84 520 146" fill="none" stroke="#ff7a5c" stroke-width="10" stroke-linecap="round"/>
+                            <path d="M0 212 Q50 194 96 210 T192 210 T288 210 T384 210 T480 210 T600 214" fill="none" stroke="#21d4c7" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+                        </svg>
+                        <div class="wave"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Route Pulse</h2>
+                        <div class="sub">The exact five-stop flow for this sailing, with the timing windows that matter most.</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-line">
+                        <div class="stop">
+                            <div class="icon">🛰️</div>
+                            <div class="day">Day 1 / Mon</div>
+                            <div class="place">Port Canaveral</div>
+                            <div class="time">Depart 4:00 PM</div>
+                        </div>
+                        <div class="stop">
+                            <div class="icon">🇧🇸</div>
+                            <div class="day">Day 2 / Tue</div>
+                            <div class="place">Nassau</div>
+                            <div class="time">9:00 AM to 5:30 PM</div>
+                        </div>
+                        <div class="stop">
+                            <div class="icon">🌴</div>
+                            <div class="day">Day 3 / Wed</div>
+                            <div class="place">CocoCay</div>
+                            <div class="time">7:00 AM to 5:00 PM</div>
+                        </div>
+                        <div class="stop">
+                            <div class="icon">🌊</div>
+                            <div class="day">Day 4 / Thu</div>
+                            <div class="place">Sea Day</div>
+                            <div class="time">Full ship sprint</div>
+                        </div>
+                        <div class="stop">
+                            <div class="icon">☀️</div>
+                            <div class="day">Day 5 / Fri</div>
+                            <div class="place">Return</div>
+                            <div class="time">Arrive 6:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Daily Game Plan</h2>
+                        <div class="sub">The high-return windows for each day instead of a full wall of text.</div>
+                    </div>
+                </div>
+                <div class="days-grid">
+                    <div class="day-card">
+                        <h3>Day 1</h3>
+                        <div class="mini">Embarkation / Port Canaveral</div>
+                        <div class="agenda">
+                            <div class="agenda-item"><div class="time">10:30</div><div class="text">Arrive early, board fast, and go straight to lunch plus app reservations.</div></div>
+                            <div class="agenda-item"><div class="time">12:30</div><div class="text">Book the hard-to-get items first: Aqua80Too, dining, comedy, escape room.</div></div>
+                            <div class="agenda-item"><div class="time">4:00</div><div class="text">Sail-away, then hit slides and FlowRider while everyone else is unpacking.</div></div>
+                            <div class="agenda-item"><div class="time">Night</div><div class="text">Welcome show, late comedy, then Sorrento's for the first-night reset.</div></div>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Day 2</h3>
+                        <div class="mini">Nassau / Walkable + Optional Upgrade</div>
+                        <div class="agenda">
+                            <div class="agenda-item"><div class="time">Morning</div><div class="text">Queen's Staircase, Fort Fincastle, Straw Market, or beach if you want low friction.</div></div>
+                            <div class="agenda-item"><div class="time">Noon</div><div class="text">Arawak Cay for conch salad if you want a classic food stop off the ship.</div></div>
+                            <div class="agenda-item"><div class="time">Afternoon</div><div class="text">Atlantis or Paradise Island only if already booked. Return early and skip stress.</div></div>
+                            <div class="agenda-item"><div class="time">Night</div><div class="text">Aqua80Too is a prime target for this evening. Arrive early.</div></div>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Day 3</h3>
+                        <div class="mini">Perfect Day at CocoCay</div>
+                        <div class="agenda">
+                            <div class="agenda-item"><div class="time">7:00</div><div class="text">Get off immediately if you want premium Oasis Lagoon or beach chairs.</div></div>
+                            <div class="agenda-item"><div class="time">Morning</div><div class="text">Do paid thrill items first. Morning beats afternoon storms and peak lines.</div></div>
+                            <div class="agenda-item"><div class="time">Midday</div><div class="text">Snack Shack, Chill Grill, or lounge pivot depending on whether you paid for beach club access.</div></div>
+                            <div class="agenda-item"><div class="time">Night</div><div class="text">Formal dinner and All In! is a strong post-island combo.</div></div>
+                        </div>
+                    </div>
+                    <div class="day-card">
+                        <h3>Day 4</h3>
+                        <div class="mini">Sea Day / Max-Out Mode</div>
+                        <div class="agenda">
+                            <div class="agenda-item"><div class="time">Early</div><div class="text">Solarium breakfast, then zip line, rock wall, FlowRider, Abyss before lines grow.</div></div>
+                            <div class="agenda-item"><div class="time">Midday</div><div class="text">Escape room, spa thermal suite, or lunch sprint depending on your pace.</div></div>
+                            <div class="agenda-item"><div class="time">Golden Hour</div><div class="text">Deck 5 aft hideaway is one of the best quiet-view moments on the ship.</div></div>
+                            <div class="agenda-item"><div class="time">Late</div><div class="text">Final dinner, final show, final deck party. This is the night to stay up.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Ship Visuals</h2>
+                        <div class="sub">A navigation-minded deck map on the left and the quietest hidden-value spots on the right.</div>
+                    </div>
+                </div>
+                <div class="visual-band">
+                    <div class="deck-map">
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 3-5</div>
+                            <div class="deck-detail">Royal Theater, Studio B, AquaTheater, Main Dining Room, Boardwalk, Johnny Rockets, Playmakers.</div>
+                        </div>
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 4</div>
+                            <div class="deck-detail">Casino Royale, Promenade flow, Pesky Parrot, Royal Railway, Schooner, comedy.</div>
+                        </div>
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 8</div>
+                            <div class="deck-detail">Central Park, 150 Central Park, Chops, Park Cafe, Izumi window, Giovanni's.</div>
+                        </div>
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 14</div>
+                            <div class="deck-detail">Solarium, Solarium Bistro, bridge wings, spa, fitness, escape rooms.</div>
+                        </div>
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 15-16</div>
+                            <div class="deck-detail">Main pool scene, Ultimate Abyss, FlowRiders, zip line, Windjammer, El Loco Fresh, Spare Tire.</div>
+                        </div>
+                        <div class="deck-card">
+                            <div class="deck-name">Deck 17-18</div>
+                            <div class="deck-detail">Sports court, mini golf, waterslides, Splashaway Bay, top deck views.</div>
+                        </div>
+                    </div>
+                    <div class="secret-stack">
+                        <div class="secret-card">
+                            <h4>Deck 5 Aft Hideaway</h4>
+                            <p>Walk the jogging track all the way back for wake views and far less noise than the big public decks.</p>
+                        </div>
+                        <div class="secret-card">
+                            <h4>Bridge Wings</h4>
+                            <p>Forward on Deck 14 for one of the sharpest sail-away and arrival photo angles on the ship.</p>
+                        </div>
+                        <div class="secret-card">
+                            <h4>Central Park Corner Nooks</h4>
+                            <p>Small balcony pockets near Deck 9 elevator corners. Great for coffee, quiet, or scrolling without chaos.</p>
+                        </div>
+                        <div class="secret-card">
+                            <h4>Solarium Bistro</h4>
+                            <p>Often ignored because people default to Windjammer. One of the best low-crowd food plays on board.</p>
+                        </div>
+                        <div class="secret-card">
+                            <h4>Behind the FlowRiders</h4>
+                            <p>Less obvious top-deck seating with shade and action nearby, minus the densest crowd pocket.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Smart Moves</h2>
+                        <div class="sub">Three quick matrices for planning decisions before and during the trip.</div>
+                    </div>
+                </div>
+                <div class="matrix">
+                    <div class="matrix-card">
+                        <h3>Book Before Sailing</h3>
+                        <ul>
+                            <li>Drink package and Wi-Fi</li>
+                            <li>Specialty dining if doing two or more</li>
+                            <li>Atlantis, Coco Beach Club, or paid thrill items</li>
+                            <li>Early arrival/check-in window</li>
+                            <li>Any premium add-on you would be annoyed to miss</li>
+                        </ul>
+                    </div>
+                    <div class="matrix-card">
+                        <h3>Hit Early</h3>
+                        <ul>
+                            <li>CocoCay chairs before 8:30 AM</li>
+                            <li>Slides and surf right after embarkation</li>
+                            <li>Zip line and rock wall on sea morning</li>
+                            <li>Escape room signups on day one</li>
+                            <li>Aqua80Too seating well before showtime</li>
+                        </ul>
+                    </div>
+                    <div class="matrix-card">
+                        <h3>Save Money</h3>
+                        <ul>
+                            <li>Specialty lunch over dinner</li>
+                            <li>Free motion sickness meds at Guest Services</li>
+                            <li>Continental room service breakfast</li>
+                            <li>Skip Starbucks if basic coffee is enough</li>
+                            <li>Embarkation-day spa deals can be lower</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Food Radar</h2>
+                        <div class="sub">Where to spend money, where to save it, and where to dodge the crush.</div>
+                    </div>
+                </div>
+                <div class="food-row">
+                    <div class="panel">
+                        <h3>Included Winners</h3>
+                        <div class="food-list">
+                            <div class="food-item"><div><div class="name">Solarium Bistro</div><div>Quiet breakfast and a reliable crowd-dodge play.</div></div><div class="tag">FREE</div></div>
+                            <div class="food-item"><div><div class="name">Park Cafe</div><div>Fast breakfasts, sandwiches, salads, easy in-and-out flow.</div></div><div class="tag">FREE</div></div>
+                            <div class="food-item"><div><div class="name">Sorrento's</div><div>Late night pizza reset after comedy, casino, or deck party.</div></div><div class="tag">FREE</div></div>
+                            <div class="food-item"><div><div class="name">El Loco Fresh</div><div>Good sea-day speed lunch without the buffet slog.</div></div><div class="tag">FREE</div></div>
+                            <div class="food-item"><div><div class="name">Main Dining Room</div><div>Still the best included sit-down dinner experience.</div></div><div class="tag">FREE</div></div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>Premium Targets</h3>
+                        <ul>
+                            <li><strong>150 Central Park:</strong> Best upscale finale dinner.</li>
+                            <li><strong>Chops Grille:</strong> Safe premium choice if your group wants steak.</li>
+                            <li><strong>Giovanni's:</strong> Good if you want a more scenic, relaxed dinner flow.</li>
+                            <li><strong>Izumi:</strong> Strong for hibachi energy or quick sushi via the park window.</li>
+                            <li><strong>Royal Railway:</strong> Built for spectacle first, food plus experience.</li>
+                        </ul>
+                        <p><strong>Best tactic:</strong> lunch pricing is often the cleanest upgrade path if you want the experience without a full dinner spend.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Contests + Fun</h2>
+                        <div class="sub">Not official answers to every onboard game, but the practical stuff worth knowing ahead of time.</div>
+                    </div>
+                </div>
+                <div class="games-grid">
+                    <div class="game-box">
+                        <div class="icon">🦆</div>
+                        <h4>Sea Ducks</h4>
+                        <p>Passenger-driven rubber duck hunt. Download the app, follow hints, and search hidden corners.</p>
+                    </div>
+                    <div class="game-box">
+                        <div class="icon">🏀</div>
+                        <h4>Sports Tournaments</h4>
+                        <p>Watch Cruise Compass for mini golf, basketball, ping pong, and poolside competitions.</p>
+                    </div>
+                    <div class="game-box">
+                        <div class="icon">🧩</div>
+                        <h4>Escape Rooms</h4>
+                        <p>Reserve early. High demand and much easier to miss on a short sailing.</p>
+                    </div>
+                    <div class="game-box">
+                        <div class="icon">🎰</div>
+                        <h4>Casino Events</h4>
+                        <p>Check signups on day one if tournaments or promo play matter to you.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <div>
+                        <h2>Port Compare</h2>
+                        <div class="sub">One side is easy urban wandering, the other is engineered island fun. Plan accordingly.</div>
+                    </div>
+                </div>
+                <div class="port-grid">
+                    <div class="port-card">
+                        <h3>Nassau</h3>
+                        <div class="meta">Tuesday, June 30 / Docked 9:00 AM to 5:30 PM</div>
+                        <div class="split">
+                            <div class="mini-panel">
+                                <h4>Easy Walkables</h4>
+                                <ul>
+                                    <li>Queen's Staircase</li>
+                                    <li>Fort Fincastle</li>
+                                    <li>Straw Market</li>
+                                    <li>Parliament Square</li>
+                                    <li>Junkanoo Beach</li>
+                                    <li>Arawak Cay Fish Fry</li>
+                                </ul>
+                            </div>
+                            <div class="mini-panel">
+                                <h4>Booked Upgrades</h4>
+                                <ul>
+                                    <li>Atlantis Aquaventure</li>
+                                    <li>Blue Lagoon Island</li>
+                                    <li>Paradise Island clubs</li>
+                                    <li>Snorkeling and ATV tours</li>
+                                    <li>Animal encounters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p><strong>Best move:</strong> either keep Nassau simple and low-friction, or commit to one strong prebooked excursion. Don't half-do both.</p>
+                    </div>
+                    <div class="port-card">
+                        <h3>Perfect Day at CocoCay</h3>
+                        <div class="meta">Wednesday, July 1 / Docked 7:00 AM to 5:00 PM</div>
+                        <div class="split">
+                            <div class="mini-panel">
+                                <h4>Included</h4>
+                                <ul>
+                                    <li>Oasis Lagoon</li>
+                                    <li>Chill Island</li>
+                                    <li>South Beach</li>
+                                    <li>Snack Shacks</li>
+                                    <li>Skipper's Grill</li>
+                                    <li>Tram transport</li>
+                                </ul>
+                            </div>
+                            <div class="mini-panel">
+                                <h4>Pay Extra</h4>
+                                <ul>
+                                    <li>Thrill Waterpark</li>
+                                    <li>Hideaway Beach</li>
+                                    <li>Coco Beach Club</li>
+                                    <li>Overwater cabanas</li>
+                                    <li>Balloon and zipline</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p><strong>Best move:</strong> get off early, do anything premium first, and remember that afternoon weather can break the vibe fast in July.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer">
+                <div>Unofficial fan infographic for the exact June 29 to July 3, 2026 sailing.</div>
+                <div><strong>Verify final show times and onboard changes in the Royal Caribbean app.</strong></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

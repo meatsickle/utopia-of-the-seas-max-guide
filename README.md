@@ -4,7 +4,11 @@ Exact sailing guide for the June 29, 2026 to July 3, 2026 Utopia of the Seas cru
 
 ## Deliverables
 
-The repo now includes a 10-page JPG set:
+The repo now includes:
+
+- `utopia-of-the-seas-infographic.jpg` - a tall visual infographic version
+- `infographic.html` - the infographic source
+- the earlier 10-page JPG set:
 
 - `01-cover-itinerary.jpg`
 - `02-schedule-days-1-2.jpg`
