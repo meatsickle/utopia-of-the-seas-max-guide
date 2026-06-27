@@ -8,7 +8,7 @@ The repo now includes:
 
 - `Utopia_of_the_Seas_MAX_Guide_Final.pdf` - primary printable PDF
 - `final.pdf` - mirror copy of the same PDF
-- `utopia-max-infographic.html` - PDF wrapper source that restores the original 10-page infographic set and adds bonus research pages
+- `utopia-max-infographic.html` - PDF wrapper source that restores the original 10-page infographic set and adds bonus infographic research pages
 - `generate_pdf.py` - local Chromium export script
 - the restored original 10 infographic JPG pages:
   - `01-cover-itinerary.jpg`
@@ -36,11 +36,11 @@ The repo now includes:
 - contests, games, duck hunt notes, and trivia angles
 - Nassau and CocoCay port planning
 - quick-reference ship stats and key times
-- bonus current-research pages covering Royal Beach Club Paradise Island, updated entertainment priorities, recent cruiser trends, and the distinction between recurring contests and unavailable future-sailing results
+- bonus infographic pages covering booking flow, Royal Beach Club decision-making, ask-for-this freebies/hacks, updated entertainment priorities, recent cruiser trends, and the distinction between recurring contests and unavailable future-sailing results
 
 ## Notes
 
 - This is an unofficial fan guide.
-- The current PDF is intentionally back to a multi-page format instead of a compressed summary.
+- The current PDF is intentionally back to a multi-page format instead of a compressed summary and is now a 13-page deck.
 - The exact sailing departs **June 29, 2026**, so sailing-specific contest winners or results do **not** exist yet before departure.
 - Show times, onboard activities, and final menus can still shift, so verify last-mile details in the Royal Caribbean app once onboard.

@@ -292,6 +292,154 @@
     .footer strong {
       color: var(--gold);
     }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .flow-step {
+      position: relative;
+      min-height: 120px;
+      border-radius: 22px;
+      padding: 16px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .flow-step::after {
+      content: "→";
+      position: absolute;
+      right: -10px;
+      top: 40px;
+      font-size: 24px;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .flow-step:last-child::after {
+      display: none;
+    }
+
+    .flow-step .num {
+      font-size: 28px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .flow-step strong,
+    .matrix-item strong,
+    .tiny-card strong {
+      display: block;
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .flow-step span,
+    .matrix-item span,
+    .tiny-card span {
+      display: block;
+      font-size: 12.5px;
+      line-height: 1.3;
+      color: var(--muted);
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .matrix-item {
+      border-radius: 20px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 108px;
+    }
+
+    .matrix-item.good {
+      background: rgba(34, 211, 197, 0.08);
+      border-color: rgba(34, 211, 197, 0.28);
+    }
+
+    .matrix-item.warn {
+      background: rgba(255, 122, 90, 0.08);
+      border-color: rgba(255, 122, 90, 0.28);
+    }
+
+    .tiny-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .tiny-card {
+      border-radius: 20px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 132px;
+    }
+
+    .chart {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .chart-row {
+      display: grid;
+      grid-template-columns: 116px 1fr 42px;
+      gap: 10px;
+      align-items: center;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .chart-bar {
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .chart-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--teal));
+    }
+
+    .chart-fill.gold {
+      background: linear-gradient(90deg, var(--gold), var(--coral));
+    }
+
+    .badge-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .micro-badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 11px;
+      color: #fff;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -308,13 +456,24 @@
 
   <section class="page info-page">
     <div class="hero">
-      <div class="eyebrow">Bonus pages added to the original deck</div>
-      <h1>2026 sailing updates<br>you actually need</h1>
-      <p>The original 10-page guide is preserved above. These added pages layer in the extra current research that was not reflected strongly enough in the earlier build: the official route confirmation, the new Nassau beach-club reality, updated entertainment/game notes, and the planning details that matter most on a short Utopia run.</p>
+      <div class="eyebrow">Bonus page 11 • visual planning flow</div>
+      <h1>How to win this<br>short sailing</h1>
+      <p>This is the visual decision-tree version of the cruise. Instead of reading paragraphs, you should be able to scan this page and know what to book first, what to decide before embarkation, and where the trip becomes a time-loss trap.</p>
       <div class="pill-row">
-        <div class="pill">Exact sailing: June 29 to July 3, 2026</div>
-        <div class="pill">Royal Beach Club now open</div>
-        <div class="pill">Short sailing = high booking pressure</div>
+        <div class="pill">Book early</div>
+        <div class="pill">Choose Nassau strategy now</div>
+        <div class="pill">Treat CocoCay as a headliner</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0.18in;">
+      <div class="meta">Fast-flow infographic</div>
+      <h2>The four-step cruise algorithm</h2>
+      <div class="flow-grid">
+        <div class="flow-step"><div class="num">1</div><strong>Before sailing</strong><span>Reserve your headliner shows, lock one premium meal if wanted, and decide whether Nassau is beach club or walkable DIY.</span></div>
+        <div class="flow-step"><div class="num">2</div><strong>Embarkation day</strong><span>Use the quiet early window for waterslides, FlowRider, ship photos, and any app cleanup while most guests are still boarding.</span></div>
+        <div class="flow-step"><div class="num">3</div><strong>Port days</strong><span>Go all-in on the plan you picked. Half-committing wastes both time and energy on a short itinerary.</span></div>
+        <div class="flow-step"><div class="num">4</div><strong>Sea day closeout</strong><span>Cash in remaining backlog: one big show, one big dinner, one calm recovery zone, and any missed attractions.</span></div>
       </div>
     </div>
 
@@ -343,137 +502,184 @@
       </div>
 
       <div class="card">
-        <div class="meta">Nassau changed</div>
-        <h2>Royal Beach Club matters now</h2>
-        <ul class="list">
-          <li><strong>Three neighborhoods:</strong> Party Cove, Paradise Beach, and Chill Beach.</li>
-          <li><strong>Scale:</strong> 3 pools, 2 beaches, 10 bars, 3 dining spots, and roughly 30 cabanas.</li>
-          <li><strong>Included with pass:</strong> all-day dining, Wi-Fi, loungers, umbrellas, towels, lockers, showers, and boat transportation.</li>
-          <li><strong>Why it changes planning:</strong> Nassau is no longer just “walk around or Atlantis.” For many cruisers this becomes the premium port choice instead.</li>
-        </ul>
-        <div class="callout"><strong>Best use:</strong> decide before you sail whether Nassau is a cheap walkable day or a dedicated beach-club day. Improvising both usually wastes the port.</div>
+        <div class="meta">Decision matrix</div>
+        <h2>Nassau choice board</h2>
+        <div class="matrix">
+          <div class="matrix-item good"><strong>Royal Beach Club day</strong><span>Best if you want one easy premium plan: 3 pools, 2 beaches, 10 bars, 3 dining spots, lockers, towels, Wi-Fi, and transport included.</span></div>
+          <div class="matrix-item good"><strong>Walkable Nassau day</strong><span>Best if you want forts, market, museum, fish fry, and a lower-cost port without scheduling stress.</span></div>
+          <div class="matrix-item warn"><strong>Atlantis improv</strong><span>Usually a time-burn if you did not decide in advance. Transit + price + queue risk all stack fast.</span></div>
+          <div class="matrix-item warn"><strong>Do a little of everything</strong><span>The classic short-cruise mistake. Too much transit and not enough payoff.</span></div>
+        </div>
+        <div class="callout"><strong>Best use:</strong> choose the port identity now. On a four-night run, clarity beats optionality.</div>
       </div>
     </div>
 
     <div class="grid three">
       <div class="card">
-        <div class="meta">Dining update</div>
-        <h3>What keeps getting recommended</h3>
-        <ul class="list">
-          <li>Royal Railway for spectacle-first dining.</li>
-          <li>Mason Jar brunch as a standout short-sailing splurge.</li>
-          <li>Park Cafe and Solarium Bistro as low-chaos wins.</li>
-          <li>Windjammer remains useful, but timing matters more than menu.</li>
-        </ul>
+        <div class="meta">Dining target</div>
+        <h3>Best-use splurges</h3>
+        <span>Royal Railway for spectacle, Mason Jar brunch for comfort, and Park Cafe or Solarium Bistro when the goal is speed with less chaos.</span>
       </div>
 
       <div class="card">
-        <div class="meta">Entertainment update</div>
-        <h3>Headliners to target early</h3>
-        <ul class="list">
-          <li>Aqua80Too at AquaTheater.</li>
-          <li>Youtopia in Studio B.</li>
-          <li>All In! in the main theater.</li>
-          <li>Comedy, karaoke, and Music Hall for late-night fill.</li>
-        </ul>
+        <div class="meta">Show target</div>
+        <h3>Reserve first</h3>
+        <span>Aqua80Too, Youtopia, and All In! are the first names to treat as non-negotiable if the app opens booking space early enough.</span>
       </div>
 
       <div class="card">
-        <div class="meta">Reality check</div>
-        <h3>Still app-only later</h3>
-        <ul class="list">
-          <li>Final show times and exact day placement.</li>
-          <li>Main Dining Room theme/menu rotation.</li>
-          <li>Specific trivia slots and game-show timing.</li>
-          <li>Standby success and line behavior once onboard.</li>
-        </ul>
+        <div class="meta">App-only zone</div>
+        <h3>Verify onboard</h3>
+        <span>Final show times, trivia slots, MDR nightly menus, and standby dynamics still belong to the Royal app once the cruise is live.</span>
       </div>
     </div>
 
-    <div class="banner">This page is the “plus” layer: it keeps the older deck intact, but updates the parts that changed most since that original build, especially Nassau strategy, live-show priorities, and the high-pressure bookings on a short Utopia itinerary.</div>
+    <div class="banner">This page behaves like an infographic on purpose: one scan should tell you the route, the port decision, the booking priority, and the short-cruise algorithm without making you read an essay.</div>
 
     <div class="footer">
-      <div>Bonus page A • current-sailing research overlay</div>
+      <div>Bonus page 11 • planning flowchart layer</div>
       <div><strong>Use this with the original 10 pages above, not instead of them.</strong></div>
     </div>
   </section>
 
   <section class="page info-page">
     <div class="hero" style="background:linear-gradient(135deg, rgba(9,44,76,0.96), rgba(47,30,94,0.9) 62%, rgba(255,122,90,0.78));">
-      <div class="eyebrow">Bonus page B</div>
-      <h1>Contests, trends,<br>and what not to fake</h1>
-      <p>This page adds the detail that gets people talking before sailing: the likely contest/game mix, the newer crowd patterns, and the important distinction between recurring ship activities and sailing-specific “results” that do not exist yet for a future departure.</p>
+      <div class="eyebrow">Bonus page 12 • ask-for-this cheat sheet</div>
+      <h1>Things to ask for<br>that people forget</h1>
+      <p>This page is built as a visual “ask list” for cabin attendant, Guest Services, and onboard comfort hacks. It focuses on recurring items cruise veterans repeatedly mention instead of generic cruise advice.</p>
       <div class="pill-row">
-        <div class="pill">Sea Ducks still active</div>
-        <div class="pill">Price is Right reported on newer sailings</div>
-        <div class="pill">Contest winners do not exist yet</div>
+        <div class="pill">Extra towels</div>
+        <div class="pill">Robes</div>
+        <div class="pill">Mattress topper</div>
+        <div class="pill">Printed Compass</div>
       </div>
     </div>
 
     <div class="grid">
       <div class="card">
-        <div class="meta">Recurring onboard fun</div>
-        <h2>Likely games and contests</h2>
-        <ul class="list">
-          <li>General trivia, music trivia, and app-based Royal Trivia sessions.</li>
-          <li>Crazy Quest, Majority Rules, Friendly Feud, Battle of the Sexes, and karaoke-heavy crowd events.</li>
-          <li>Pool-deck contests and “World’s Sexiest Man” style audience games.</li>
-          <li>Casino tournaments, sports challenges, mini-golf, ping pong, and pickleball activity.</li>
-          <li>The unofficial Sea Ducks tradition remains one of the most visible passenger-run games.</li>
-        </ul>
+        <div class="meta">Cabin attendant asks</div>
+        <h2>High-value room requests</h2>
+        <div class="matrix">
+          <div class="matrix-item good"><strong>Extra towels + hangers</strong><span>Simple ask, high utility, especially with beach days and wet gear stacking up.</span></div>
+          <div class="matrix-item good"><strong>Bathrobes</strong><span>Often available if requested; not always automatically placed in standard cabins.</span></div>
+          <div class="matrix-item good"><strong>Pillow-top / mattress topper</strong><span>One of the most repeated comfort upgrades from seasoned cruisers.</span></div>
+          <div class="matrix-item good"><strong>Evening cleaning timing</strong><span>Ask for the room to be reset when you are most likely to be out, not on their default rhythm.</span></div>
+          <div class="matrix-item good"><strong>Printed Cruise Compass</strong><span>Useful if you like a physical planning sheet even though the app runs the ship.</span></div>
+          <div class="matrix-item good"><strong>CPAP / distilled water / extension help</strong><span>Common special-needs support items repeatedly mentioned by regular cruisers.</span></div>
+        </div>
       </div>
 
       <div class="card">
-        <div class="meta">What you asked for that cannot be invented</div>
-        <h2>Why there are no winners yet</h2>
-        <p>This exact cruise has not sailed yet. That means there are no legitimate contest winners, no real trivia answer sheets from this departure, and no sailing-specific results to summarize as of June 27, 2026. The honest way to handle that is to show the contest ecosystem, the likely formats, and the prep angles without pretending the future cruise already happened.</p>
-        <div class="callout"><strong>Translation:</strong> recurring activity detail belongs in the guide; fake winners or fake results do not.</div>
+        <div class="meta">Guest services + comfort</div>
+        <h2>Quick-ask utility board</h2>
+        <div class="tiny-grid">
+          <div class="tiny-card"><strong>Motion-sickness meds</strong><span>Often available without drama if you need a quick fix onboard.</span></div>
+          <div class="tiny-card"><strong>Sharps container</strong><span>Useful medical ask if needed, and easier than improvising in-cabin.</span></div>
+          <div class="tiny-card"><strong>Connecting door / divider</strong><span>Ask early if your cabin setup makes this relevant.</span></div>
+          <div class="tiny-card"><strong>Towel animals</strong><span>Not essential, but a common morale ask on family-heavy sailings.</span></div>
+          <div class="tiny-card"><strong>Breakfast order card</strong><span>Good low-friction convenience for an early port morning.</span></div>
+          <div class="tiny-card"><strong>Name + cash tip</strong><span>Introduce yourself early and tip directly if you want something to stay personal.</span></div>
+        </div>
+        <div class="callout"><strong>Rule:</strong> ask for comfort or service help, not rule-bending. The best “hacks” are legitimate requests delivered early and politely.</div>
       </div>
     </div>
 
     <div class="grid three">
       <div class="card">
-        <div class="meta">Recent cruiser emphasis</div>
-        <h3>Most searched / discussed</h3>
-        <ul class="list">
-          <li>Show reservations opening and filling.</li>
-          <li>CocoCay early strategy.</li>
-          <li>Mason Jar vs Royal Railway value.</li>
-          <li>Royal Beach Club worth it or not.</li>
-          <li>Where to hide or find ducks without breaking etiquette.</li>
-        </ul>
+        <div class="meta">Do this on day 1</div>
+        <h3>Ask early, not after a problem</h3>
+        <span>The best requests happen soon after meeting your attendant, not once discomfort has already eaten half the trip.</span>
       </div>
 
       <div class="card">
-        <div class="meta">Best short-sailing moves</div>
-        <h3>How to actually win the ship</h3>
-        <ul class="list">
-          <li>Use embarkation day for top-deck thrill rides.</li>
-          <li>Commit to one strong Nassau plan before you board.</li>
-          <li>Treat CocoCay as a primary event, not filler.</li>
-          <li>Choose one premium meal and one premium show on sea day.</li>
-          <li>Use hidden calm zones to recover instead of drifting.</li>
-        </ul>
+        <div class="meta">Best-value mindset</div>
+        <h3>Free if you ask beats paid if you panic</h3>
+        <span>Many comfort fixes cost nothing if requested early. That includes room setup, printed materials, and select convenience items.</span>
       </div>
 
       <div class="card">
-        <div class="meta">Source discipline</div>
-        <h3>What fed this rebuild</h3>
-        <ul class="list">
-          <li>The older 10-page repo version and long-form HTML guide.</li>
-          <li>Official Royal Caribbean itinerary and ship pages.</li>
-          <li>Royal Beach Club official materials.</li>
-          <li>Port Canaveral schedule/parking references.</li>
-          <li>Recent cruiser reports used only to identify patterns, not to fabricate future results.</li>
-        </ul>
+        <div class="meta">Caution</div>
+        <h3>Service can vary by sailing</h3>
+        <span>These are recurring cruiser-reported wins, not guaranteed entitlements. Ask nicely, ask early, and adapt to the crew’s actual capacity.</span>
       </div>
     </div>
 
-    <div class="banner">The fix here is simple: keep the rich 10-page infographic, then add more researched pages on top of it. That is what this PDF now does.</div>
+    <div class="banner">This page is intentionally matrix-heavy because that is what makes it scan like an infographic instead of a guide: fast asks, fast payoffs, and a clear split between cabin, guest-service, and comfort moves.</div>
 
     <div class="footer">
-      <div>Bonus page B • trends, contests, and planning honesty</div>
-      <div><strong>Final timings, menus, and event slots still belong to the Royal app once the cruise goes live.</strong></div>
+      <div>Bonus page 12 • ask-for-this cheat sheet</div>
+      <div><strong>Recurring asks from cruiser reports; verify onboard availability.</strong></div>
+    </div>
+  </section>
+
+  <section class="page info-page">
+    <div class="hero" style="background:linear-gradient(135deg, rgba(24,41,88,0.96), rgba(18,104,111,0.92) 62%, rgba(242,196,109,0.74));">
+      <div class="eyebrow">Bonus page 13 • games, trivia, and social chaos</div>
+      <h1>Contests and trivia<br>without making things up</h1>
+      <p>This page is the honest contest board: what is likely to recur, what people actually prep for, what newer cruisers keep talking about, and where the line is between pattern recognition and fake future-sailing results.</p>
+      <div class="pill-row">
+        <div class="pill">Sea Ducks</div>
+        <div class="pill">Royal Trivia</div>
+        <div class="pill">Game show circuit</div>
+        <div class="pill">No future winners yet</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="meta">Recurring activity map</div>
+        <h2>Likely onboard game mix</h2>
+        <div class="chart">
+          <div class="chart-row"><div>Trivia</div><div class="chart-bar"><div class="chart-fill" style="width:94%"></div></div><div>High</div></div>
+          <div class="chart-row"><div>Karaoke</div><div class="chart-bar"><div class="chart-fill" style="width:83%"></div></div><div>High</div></div>
+          <div class="chart-row"><div>Friendly Feud</div><div class="chart-bar"><div class="chart-fill gold" style="width:76%"></div></div><div>Med</div></div>
+          <div class="chart-row"><div>Majority Rules</div><div class="chart-bar"><div class="chart-fill gold" style="width:72%"></div></div><div>Med</div></div>
+          <div class="chart-row"><div>Crazy Quest</div><div class="chart-bar"><div class="chart-fill gold" style="width:66%"></div></div><div>Med</div></div>
+          <div class="chart-row"><div>Casino tournaments</div><div class="chart-bar"><div class="chart-fill" style="width:58%"></div></div><div>Var</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="meta">What to prep for</div>
+        <h2>Actual cheat angles</h2>
+        <div class="tiny-grid">
+          <div class="tiny-card"><strong>Music rounds</strong><span>Aqua80Too makes 80s hits an unusually relevant comfort zone.</span></div>
+          <div class="tiny-card"><strong>Bahamas basics</strong><span>Nassau, USD acceptance, and CocoCay facts are recurring easy points.</span></div>
+          <div class="tiny-card"><strong>Ship numbers</strong><span>Deck count, tonnage, and signature attractions recur in cruise culture trivia.</span></div>
+          <div class="tiny-card"><strong>Duck etiquette</strong><span>Know where not to hide ducks: pools, shops, and planted areas.</span></div>
+          <div class="tiny-card"><strong>App vigilance</strong><span>Daily listings move; the app is where the contest board becomes real.</span></div>
+          <div class="tiny-card"><strong>Audience games</strong><span>Energy matters more than facts in Love & Marriage or pool-deck chaos.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="meta">Social/search trend board</div>
+        <h2>What recent cruisers keep hunting for</h2>
+        <div class="badge-line">
+          <div class="micro-badge">Show reservations</div>
+          <div class="micro-badge">CocoCay chair strategy</div>
+          <div class="micro-badge">Mason Jar brunch</div>
+          <div class="micro-badge">Royal Railway value</div>
+          <div class="micro-badge">Royal Beach Club reviews</div>
+          <div class="micro-badge">Sea Ducks</div>
+          <div class="micro-badge">Wi-Fi deal timing</div>
+          <div class="micro-badge">Crowd-avoidance hacks</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="meta">Truth line</div>
+        <h2>What this guide will not fake</h2>
+        <p>There are no real contest winners, no true sailing-specific answer sheets, and no genuine June 29, 2026 result board yet because the cruise has not happened. This guide can map the ecosystem, the likely formats, and the prep angles, but it should not hallucinate a future scoreboard.</p>
+        <div class="callout"><strong>Use this page for:</strong> pattern recognition, not prophecy.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Bonus page 13 • contest / trivia infographic layer</div>
+      <div><strong>Patterns from recent sailings, not fabricated future results.</strong></div>
     </div>
   </section>
 </body>
