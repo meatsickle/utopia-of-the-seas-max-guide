@@ -1,48 +1,80 @@
 #!/usr/bin/env python3
-"""Generate high-quality multi-page PDF from the Utopia MAX Guide HTML infographic."""
+"""Render the self-contained Utopia infographic HTML to PDF with local Chromium."""
 
-from playwright.sync_api import sync_playwright
-import os
+from __future__ import annotations
 
-def main():
-    html_path = os.path.abspath("utopia-max-infographic.html")
-    output_path = os.path.abspath("Utopia_of_the_Seas_MAX_Guide_Final.pdf")
-    
-    print(f"Loading: {html_path}")
-    
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            viewport={"width": 1200, "height": 1600},  # Good for infographic rendering
-            device_scale_factor=2,  # Higher quality
-        )
-        page = context.new_page()
-        
-        # Load the local HTML file
-        page.goto(f"file://{html_path}", wait_until="networkidle", timeout=120000)
-        
-        # Extra wait for images and Tailwind to fully render
-        page.wait_for_timeout(3000)
-        
-        # Generate PDF - multi-page A4 portrait with good margins
-        page.pdf(
-            path=output_path,
-            format="A4",
-            print_background=True,
-            margin={
-                "top": "0.5in",
-                "bottom": "0.5in",
-                "left": "0.4in",
-                "right": "0.4in",
-            },
-            display_header_footer=False,
-            prefer_css_page_size=True,
-        )
-        
-        browser.close()
-    
-    print(f"✅ PDF created: {output_path}")
-    print(f"   Size: {os.path.getsize(output_path) / 1024:.1f} KB")
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+
+REPO_DIR = Path(__file__).resolve().parent
+HTML_PATH = REPO_DIR / "utopia-max-infographic.html"
+PDF_PATH = REPO_DIR / "Utopia_of_the_Seas_MAX_Guide_Final.pdf"
+ALT_PDF_PATH = REPO_DIR / "final.pdf"
+
+
+def resolve_chromium() -> str:
+    for candidate in ("chromium", "google-chrome", "chromium-browser"):
+        path = shutil.which(candidate)
+        if path:
+            return path
+    raise FileNotFoundError("Could not find Chromium or Chrome in PATH.")
+
+
+def main() -> int:
+    if not HTML_PATH.exists():
+        print(f"Missing HTML source: {HTML_PATH}", file=sys.stderr)
+        return 1
+
+    browser = resolve_chromium()
+    url = HTML_PATH.resolve().as_uri()
+
+    with tempfile.TemporaryDirectory(prefix="utopia-pdf-") as profile_dir:
+        cmd = [
+            browser,
+            "--headless=new",
+            "--disable-gpu",
+            "--no-sandbox",
+            "--disable-background-networking",
+            "--disable-component-update",
+            "--disable-sync",
+            "--metrics-recording-only",
+            "--no-first-run",
+            "--run-all-compositor-stages-before-draw",
+            f"--user-data-dir={profile_dir}",
+            "--print-to-pdf-no-header",
+            f"--print-to-pdf={PDF_PATH}",
+            "--window-size=1632,1056",
+            url,
+        ]
+
+        try:
+            result = subprocess.run(
+                cmd,
+                cwd=REPO_DIR,
+                capture_output=True,
+                text=True,
+                timeout=25,
+            )
+        except subprocess.TimeoutExpired:
+            if not PDF_PATH.exists():
+                print("Chromium timed out before writing the PDF.", file=sys.stderr)
+                return 1
+        else:
+            if result.returncode != 0:
+                print(result.stdout)
+                print(result.stderr, file=sys.stderr)
+                return result.returncode
+
+    shutil.copyfile(PDF_PATH, ALT_PDF_PATH)
+    size_kb = PDF_PATH.stat().st_size / 1024
+    print(f"PDF created: {PDF_PATH.name} ({size_kb:.1f} KB)")
+    print(f"Mirror copy: {ALT_PDF_PATH.name}")
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

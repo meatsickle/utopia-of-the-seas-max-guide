@@ -1,578 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTOPIA OF THE SEAS • MAX GUIDE • June 29–July 3 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        :root {
-            --navy: #0a1628;
-            --cyan: #00e5ff;
-            --orange: #ff6b00;
-        }
-        
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.025em;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utopia of the Seas Sailing Brief | June 29 to July 3, 2026</title>
+  <style>
+    :root {
+      --ink: #16344a;
+      --ink-soft: #3a5b70;
+      --ocean: #0387b7;
+      --aqua: #43c5dc;
+      --foam: #e8f7fb;
+      --sand: #f6efe2;
+      --paper: #fffaf2;
+      --coral: #ff7c57;
+      --sun: #f9c564;
+      --mint: #1e8d80;
+      --line: rgba(22, 52, 74, 0.14);
+      --shadow: 0 18px 34px rgba(16, 44, 66, 0.12);
+      --radius: 22px;
+    }
 
-        .infographic-section {
-            background: linear-gradient(145deg, #0a1628 0%, #0f213a 100%);
-            border: 1px solid #1e3a5f;
-        }
+    @page {
+      size: 17in 11in;
+      margin: 0;
+    }
 
-        .stat-card {
-            background: #0f213a;
-            border: 1px solid #1e3a5f;
-            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .stat-card:hover {
-            transform: translateY(-4px);
-            border-color: #00e5ff;
-        }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #dfeff5;
+      color: var(--ink);
+      font-family: "Liberation Sans", Arial, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
 
-        .neon-cyan {
-            color: #00e5ff;
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-        }
+    body {
+      font-size: 12.4px;
+      line-height: 1.35;
+    }
 
-        .neon-orange {
-            color: #ff6b00;
-            text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
-        }
+    .page {
+      width: 17in;
+      height: 11in;
+      padding: 0.52in 0.56in;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(67, 197, 220, 0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(249, 197, 100, 0.18), transparent 28%),
+        linear-gradient(180deg, #fcfaf4 0%, #f6efe2 100%);
+    }
 
-        .section-header {
-            background: linear-gradient(to right, #0a1628, #0f213a);
-            border-bottom: 1px solid #1e3a5f;
-        }
+    .page + .page {
+      page-break-before: always;
+    }
 
-        .timeline-item {
-            position: relative;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 31px;
-            top: 0;
-            bottom: -24px;
-            width: 3px;
-            background: linear-gradient(#00e5ff, #ff6b00);
-        }
-        
-        .timeline-item:last-child::before {
-            display: none;
-        }
+    .page::before,
+    .page::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+    }
 
-        .icon-bg {
-            background: rgba(0, 229, 255, 0.1);
-            color: #00e5ff;
-        }
+    .page::before {
+      width: 5.4in;
+      height: 5.4in;
+      top: -2.7in;
+      right: -1.7in;
+      background: radial-gradient(circle, rgba(67, 197, 220, 0.22) 0%, rgba(67, 197, 220, 0) 72%);
+    }
 
-        .tropical-gradient {
-            background: linear-gradient(90deg, #00e5ff, #ff6b00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .page::after {
+      width: 4.1in;
+      height: 4.1in;
+      bottom: -2.1in;
+      left: -1.4in;
+      background: radial-gradient(circle, rgba(255, 124, 87, 0.14) 0%, rgba(255, 124, 87, 0) 70%);
+    }
 
-        .infographic-img {
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            border: 1px solid #1e3a5f;
-        }
+    .heading,
+    .kicker,
+    .section-title,
+    .caps {
+      font-family: "Liberation Sans Narrow", "Arial Narrow", sans-serif;
+      letter-spacing: 0.04em;
+    }
 
-        .data-row {
-            border-bottom: 1px solid #1e3a5f;
-        }
+    .heading {
+      font-size: 38px;
+      line-height: 0.96;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
 
-        .tip-box {
-            background: #0f213a;
-            border-left: 4px solid #ff6b00;
-        }
-    </style>
+    .subheading {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.92);
+      margin-top: 10px;
+      max-width: 7.5in;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 0.34in 0.38in;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(5, 68, 101, 0.98) 0%, rgba(5, 125, 164, 0.95) 55%, rgba(67, 197, 220, 0.92) 100%);
+      color: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 2.2in;
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr;
+      gap: 0.32in;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -7% -42% auto;
+      width: 4.4in;
+      height: 2.3in;
+      background:
+        radial-gradient(circle at 35% 28%, rgba(255,255,255,0.24), transparent 18%),
+        radial-gradient(circle at 70% 40%, rgba(255,255,255,0.18), transparent 14%),
+        linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+      transform: rotate(-8deg);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .badge strong {
+      font-size: 13px;
+    }
+
+    .hero-art {
+      align-self: end;
+      justify-self: end;
+      width: 100%;
+      max-width: 4.5in;
+    }
+
+    .route-card {
+      margin-top: 0.26in;
+      position: relative;
+      z-index: 1;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+      box-shadow: 0 12px 28px rgba(16, 44, 66, 0.08);
+      padding: 0.24in 0.28in;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .section-note {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .route-line {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      align-items: start;
+      position: relative;
+    }
+
+    .route-line::before {
+      content: "";
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      top: 18px;
+      border-top: 3px dashed rgba(3, 135, 183, 0.5);
+      z-index: 0;
+    }
+
+    .route-stop {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .route-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ocean), var(--aqua));
+      box-shadow: 0 10px 18px rgba(3, 135, 183, 0.2);
+      display: grid;
+      place-items: center;
+      color: #fff;
+    }
+
+    .route-stop h3 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+    }
+
+    .route-stop p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .route-stop span {
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .layout {
+      position: relative;
+      z-index: 1;
+      margin-top: 0.28in;
+      display: grid;
+      grid-template-columns: 1.08fr 0.94fr 0.98fr;
+      gap: 0.2in;
+      align-items: start;
+    }
+
+    .stack {
+      display: grid;
+      gap: 0.18in;
+    }
+
+    .card {
+      position: relative;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+      box-shadow: 0 10px 20px rgba(16, 44, 66, 0.08);
+      padding: 0.18in 0.2in;
+      overflow: hidden;
+    }
+
+    .card.tint-blue {
+      background: linear-gradient(180deg, rgba(232, 247, 251, 0.96), rgba(255, 255, 255, 0.92));
+    }
+
+    .card.tint-coral {
+      background: linear-gradient(180deg, rgba(255, 244, 240, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .card.tint-mint {
+      background: linear-gradient(180deg, rgba(237, 250, 247, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 7px;
+      background: linear-gradient(180deg, var(--aqua), var(--ocean));
+    }
+
+    .card.coral-line::before {
+      background: linear-gradient(180deg, var(--sun), var(--coral));
+    }
+
+    .card.mint-line::before {
+      background: linear-gradient(180deg, #36c9b8, var(--mint));
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .card-head h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.05;
+      font-family: "Liberation Sans Narrow", "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .smallcaps {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(3, 135, 183, 0.12);
+      color: var(--ocean);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .smallcaps.coral {
+      background: rgba(255, 124, 87, 0.13);
+      color: #ce522e;
+    }
+
+    .smallcaps.mint {
+      background: rgba(30, 141, 128, 0.12);
+      color: #176e64;
+    }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .day-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .day-card {
+      border-radius: 18px;
+      padding: 14px 14px 13px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+    }
+
+    .day-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .day-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+      font-weight: 700;
+    }
+
+    .day-date {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .day-port {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .time-pill {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(22, 52, 74, 0.08);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .day-tip {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .mini-list,
+    .bullet-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .mini-list li,
+    .bullet-list li {
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .mini-list li::before,
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.54em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--coral);
+    }
+
+    .bullet-list li::before {
+      background: var(--ocean);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(22, 52, 74, 0.09);
+      font-size: 10.5px;
+      font-weight: 700;
+    }
+
+    .note-box {
+      margin-top: 12px;
+      padding: 12px 13px;
+      border-radius: 16px;
+      background: rgba(22, 52, 74, 0.06);
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    .legend {
+      display: grid;
+      gap: 9px;
+    }
+
+    .legend-row {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding-top: 7px;
+      border-top: 1px solid var(--line);
+    }
+
+    .legend-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .legend-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .legend-copy strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .footer-band {
+      position: absolute;
+      left: 0.56in;
+      right: 0.56in;
+      bottom: 0.42in;
+      z-index: 1;
+      border-radius: 20px;
+      background: rgba(22, 52, 74, 0.94);
+      color: rgba(255,255,255,0.92);
+      padding: 12px 16px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .footer-band h4 {
+      margin: 0 0 5px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #9fe8f4;
+      font-family: "Liberation Sans Narrow", "Arial Narrow", sans-serif;
+    }
+
+    .footer-band p {
+      margin: 0;
+      font-size: 10px;
+      line-height: 1.32;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .menu-col {
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+    }
+
+    .menu-col h4 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+    }
+
+    .menu-col .bullet-list li {
+      font-size: 11px;
+    }
+
+    .show-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .show-item {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 10px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .show-item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .show-type {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ocean);
+    }
+
+    .show-copy strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .trend-grid {
+      display: grid;
+      gap: 9px;
+    }
+
+    .trend-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .trend-label {
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .trend-bar {
+      position: relative;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(22, 52, 74, 0.08);
+      overflow: hidden;
+    }
+
+    .trend-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--coral), var(--sun));
+    }
+
+    .callout {
+      padding: 12px 13px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255, 124, 87, 0.14), rgba(249, 197, 100, 0.18));
+      border: 1px solid rgba(255, 124, 87, 0.18);
+      font-size: 11px;
+      color: #7b3e21;
+    }
+
+    .tiny {
+      font-size: 10px;
+      color: var(--ink-soft);
+    }
+
+    .tight li {
+      margin-bottom: 1px;
+    }
+
+    svg {
+      display: block;
+    }
+
+    .ship-line {
+      width: 100%;
+      max-width: 4.2in;
+      margin-left: auto;
+    }
+
+    .postcard {
+      border-radius: 20px;
+      padding: 12px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(22, 52, 74, 0.08);
+      margin-bottom: 12px;
+    }
+
+    .postcard svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .sources {
+      font-size: 9px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.28;
+    }
+  </style>
 </head>
-<body class="bg-[#0a1628] text-white">
-    <!-- HERO / COVER -->
-    <div class="max-w-screen-xl mx-auto">
-        <div class="relative">
-            <img src="https://v3b.fal.media/files/b/0a9fdd6c/71UA0Zj-g1Ch0veGKGyCg_1ZNmo0EE.png" 
-                 alt="Utopia of the Seas MAX Guide Cover" 
-                 class="w-full h-auto rounded-b-3xl shadow-2xl infographic-img">
-            
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 rounded-b-3xl"></div>
-            
-            <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
-                <div class="max-w-4xl">
-                    <div class="flex items-center gap-x-3 mb-3">
-                        <div class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-sm font-semibold flex items-center gap-x-2 border border-white/20">
-                            <i class="fas fa-ship"></i>
-                            <span>ROYAL CARIBBEAN • OASIS CLASS</span>
-                        </div>
-                        <div class="px-3 py-1 bg-[#ff6b00] text-black text-xs font-black tracking-[1.5px] rounded-full flex items-center">4-NIGHT BAHAMAS</div>
-                    </div>
-                    
-                    <h1 class="text-6xl md:text-7xl font-black heading-font leading-none tracking-tighter mb-2">
-                        UTOPIA OF THE SEAS<br>
-                        <span class="tropical-gradient">MAX GUIDE</span>
-                    </h1>
-                    
-                    <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 text-2xl md:text-3xl font-semibold mb-6">
-                        <span class="text-white">June 29 – July 3, 2026</span>
-                        <span class="text-[#00e5ff]">•</span>
-                        <span>Port Canaveral</span>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <div class="flex items-center gap-x-2 bg-white/10 px-4 py-2 rounded-xl backdrop-blur">
-                            <i class="fas fa-calendar text-[#00e5ff]"></i>
-                            <span class="font-medium">5 Days / 4 Nights</span>
-                        </div>
-                        <div class="flex items-center gap-x-2 bg-white/10 px-4 py-2 rounded-xl backdrop-blur">
-                            <i class="fas fa-globe text-[#ff6b00]"></i>
-                            <span class="font-medium">Nassau + Perfect Day CocoCay</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+  <section class="page">
+    <div class="hero">
+      <div>
+        <div class="kicker">
+          <span>Specific sailing brief</span>
+          <span>June 29 to July 3, 2026</span>
         </div>
+        <h1 class="heading">Utopia of the Seas<br>Sailing Brief</h1>
+        <div class="subheading">
+          Exact 4-night Bahamas run from Port Canaveral with Nassau, Perfect Day at CocoCay, one sea day, and a same-week freshness check for the details cruisers actually plan around.
+        </div>
+        <div class="hero-badges">
+          <div class="badge"><strong>CT1</strong> Port Canaveral homeport</div>
+          <div class="badge"><strong>4:00 PM</strong> planned departure</div>
+          <div class="badge"><strong>21</strong> dining venues</div>
+          <div class="badge"><strong>23</strong> bars and lounges</div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg class="ship-line" viewBox="0 0 420 220" aria-hidden="true">
+          <defs>
+            <linearGradient id="wave" x1="0%" x2="100%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+            </linearGradient>
+          </defs>
+          <path d="M26 184c28-18 53-28 74-28h209c24 0 43-5 59-18l26-20v35c-14 14-30 22-48 25l-21 4c-16 3-32 5-48 5H114c-18 0-37 2-56 7l-30 8-2-18z" fill="#fff" opacity="0.92"/>
+          <path d="M126 75h122c9 0 17 8 17 17v48H98V92c0-9 8-17 28-17z" fill="#dff7fc" opacity="0.96"/>
+          <rect x="159" y="54" width="84" height="18" rx="7" fill="#dff7fc" opacity="0.96"/>
+          <rect x="178" y="34" width="16" height="24" rx="4" fill="#dff7fc" opacity="0.96"/>
+          <rect x="206" y="28" width="16" height="30" rx="4" fill="#dff7fc" opacity="0.96"/>
+          <rect x="234" y="38" width="16" height="20" rx="4" fill="#dff7fc" opacity="0.96"/>
+          <rect x="116" y="96" width="132" height="12" rx="6" fill="#8cddeb"/>
+          <g fill="#0387b7">
+            <circle cx="122" cy="153" r="3"/>
+            <circle cx="141" cy="153" r="3"/>
+            <circle cx="160" cy="153" r="3"/>
+            <circle cx="179" cy="153" r="3"/>
+            <circle cx="198" cy="153" r="3"/>
+            <circle cx="217" cy="153" r="3"/>
+            <circle cx="236" cy="153" r="3"/>
+          </g>
+          <path d="M24 200c29-5 57-5 85 0 24 4 47 4 71 0 28-5 57-5 85 0 24 4 47 4 71 0 28-5 56-5 84 0" fill="none" stroke="url(#wave)" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+      </div>
     </div>
 
-    <!-- QUICK STATS BAR -->
-    <div class="max-w-screen-xl mx-auto px-6 pt-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            <div class="stat-card rounded-2xl p-4 flex items-center gap-x-4">
-                <i class="fas fa-ship text-3xl text-[#00e5ff]"></i>
-                <div>
-                    <div class="text-xs text-gray-400">SHIP</div>
-                    <div class="font-bold">Utopia of the Seas</div>
-                </div>
-            </div>
-            <div class="stat-card rounded-2xl p-4 flex items-center gap-x-4">
-                <i class="fas fa-weight-hanging text-3xl text-[#00e5ff]"></i>
-                <div>
-                    <div class="font-bold text-2xl">236,473</div>
-                    <div class="text-xs text-gray-400">TONS • 1,188 FT</div>
-                </div>
-            </div>
-            <div class="stat-card rounded-2xl p-4">
-                <div class="text-xs text-gray-400 mb-1">PASSENGERS</div>
-                <div class="font-black text-3xl">5,668</div>
-                <div class="text-xs">double occupancy</div>
-            </div>
-            <div class="stat-card rounded-2xl p-4 flex gap-4">
-                <div>
-                    <div class="font-black text-3xl">5</div>
-                    <div class="text-xs text-gray-400">POOLS</div>
-                </div>
-                <div>
-                    <div class="font-black text-3xl">8</div>
-                    <div class="text-xs text-gray-400">HOT TUBS</div>
-                </div>
-            </div>
-            <div class="stat-card rounded-2xl p-4 flex gap-4">
-                <div>
-                    <div class="font-black text-3xl">21</div>
-                    <div class="text-xs text-gray-400">DINING</div>
-                </div>
-                <div>
-                    <div class="font-black text-3xl">23</div>
-                    <div class="text-xs text-gray-400">BARS</div>
-                </div>
-            </div>
-            <div class="stat-card rounded-2xl p-4">
-                <div class="font-black text-3xl">17+</div>
-                <div class="text-xs text-gray-400">WATERSLIDES</div>
-                <div class="text-[10px]">including Ultimate Abyss</div>
-            </div>
-            <div class="stat-card rounded-2xl p-4">
-                <div class="font-bold">4.8/5</div>
-                <div class="text-xs text-gray-400">102,598 reviews</div>
-                <div class="text-[#ff6b00] text-xs font-semibold">WORLD'S BIGGEST WEEKEND</div>
-            </div>
+    <div class="route-card">
+      <h2 class="section-title">Locked itinerary</h2>
+      <div class="section-note">This cruise departs Monday, June 29, 2026. Contest winners and final onboard schedules do not exist yet because the sailing has not started as of Friday, June 27, 2026.</div>
+      <div class="route-line">
+        <div class="route-stop">
+          <div class="route-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l3 5h-2v5.3l4.94 5.44A3 3 0 0 1 15.72 23H8.28a3 3 0 0 1-2.22-5.26L11 12.3V7H9l3-5z"/></svg>
+          </div>
+          <h3>Day 1</h3>
+          <p>Port Canaveral</p>
+          <span>Mon Jun 29 • depart 4:00 PM</span>
         </div>
+        <div class="route-stop">
+          <div class="route-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 21h16v-2H4v2zm1-4h14l-1.5-7H14V6a2 2 0 0 0-4 0v4H6.5L5 17zm7-11a1 1 0 0 1 1 1v3h-2V7a1 1 0 0 1 1-1z"/></svg>
+          </div>
+          <h3>Day 2</h3>
+          <p>Nassau</p>
+          <span>Tue Jun 30 • 9:00 AM to 5:30 PM</span>
+        </div>
+        <div class="route-stop">
+          <div class="route-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c2.2 0 4 1.8 4 4 0 1.5-.84 2.8-2.08 3.48L17 22h-2l-1.3-5h-3.4L9 22H7l3.08-12.52A3.99 3.99 0 0 1 8 6c0-2.2 1.8-4 4-4z"/></svg>
+          </div>
+          <h3>Day 3</h3>
+          <p>Perfect Day CocoCay</p>
+          <span>Wed Jul 1 • planned 7:00 AM to 5:00 PM</span>
+        </div>
+        <div class="route-stop">
+          <div class="route-dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 13c2.8 0 4.4-1 6-2.1 1.6-1 3.2-1.9 6-1.9s4.4.9 6 1.9c1.6 1.1 3.2 2.1 6 2.1v2c-3.4 0-5.4-1.2-7-2.3-1.4-.9-2.6-1.7-5-1.7s-3.6.8-5 1.7c-1.6 1.1-3.6 2.3-7 2.3v-2zm0 5c2.8 0 4.4-1 6-2.1 1.6-1 3.2-1.9 6-1.9s4.4.9 6 1.9c1.6 1.1 3.2 2.1 6 2.1v2c-3.4 0-5.4-1.2-7-2.3-1.4-.9-2.6-1.7-5-1.7s-3.6.8-5 1.7c-1.6 1.1-3.6 2.3-7 2.3v-2z"/></svg>
+          </div>
+          <h3>Day 4/5</h3>
+          <p>Sea day, then home</p>
+          <span>Thu Jul 2 • Fri Jul 3 arrival 6:00 AM</span>
+        </div>
+      </div>
     </div>
 
-    <!-- FULL ITINERARY TIMELINE -->
-    <div class="max-w-screen-xl mx-auto px-6 py-12" id="itinerary">
-        <div class="flex items-end justify-between mb-6">
+    <div class="layout">
+      <div class="stack">
+        <div class="card tint-blue">
+          <div class="card-head">
             <div>
-                <div class="uppercase tracking-[2px] text-xs font-semibold text-[#00e5ff]">YOUR EXACT SAILING</div>
-                <h2 class="text-5xl font-black heading-font">The 5-Day Playbook</h2>
+              <div class="smallcaps">Daily playbook</div>
+              <h3>Exact sailing flow</h3>
             </div>
-            <div class="hidden md:block text-right text-sm text-gray-400">All times Eastern</div>
-        </div>
-
-        <div class="grid md:grid-cols-5 gap-4 mb-6">
-            <!-- Day 1 -->
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <div class="text-[#ff6b00] font-black text-sm">DAY 1 • MON</div>
-                        <div class="text-2xl font-bold">Jun 29</div>
-                    </div>
-                    <i class="fas fa-anchor text-4xl text-[#00e5ff]"></i>
-                </div>
-                <div class="mt-4">
-                    <div class="font-semibold">Port Canaveral</div>
-                    <div class="text-sm text-gray-400">Departs <span class="text-white font-bold">4:00 PM</span></div>
-                </div>
-                <div class="mt-4 text-sm space-y-1">
-                    <div class="flex justify-between"><span>Boarding</span><span class="text-[#00e5ff]">~11:00 AM</span></div>
-                    <div class="flex justify-between"><span>Arrive early</span><span>2-3 hrs before</span></div>
-                </div>
-                <div class="mt-3 text-xs bg-[#ff6b00]/10 text-[#ff6b00] px-3 py-1 rounded-lg inline-block">Kennedy Space Center nearby</div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#0387b7" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9zm-9 2h2v2h2v2h-2v2h-2v-2H8v-2h4v-2z"/></svg>
             </div>
-
-            <!-- Day 2 -->
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <div class="text-[#ff6b00] font-black text-sm">DAY 2 • TUE</div>
-                        <div class="text-2xl font-bold">Jun 30</div>
-                    </div>
-                    <i class="fas fa-city text-4xl text-[#00e5ff]"></i>
-                </div>
-                <div class="mt-4">
-                    <div class="font-semibold">Nassau, Bahamas</div>
-                    <div class="text-sm">9:00 AM – <span class="font-bold">5:30 PM</span></div>
-                </div>
-                <div class="mt-4 text-xs space-y-2">
-                    <div class="flex items-center gap-2"><i class="fas fa-umbrella-beach"></i> <span>Royal Beach Club Paradise Island</span></div>
-                    <div class="text-gray-400">All-inclusive day pass recommended</div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="infographic-section rounded-3xl p-6 border border-[#00e5ff]/30">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <div class="text-[#ff6b00] font-black text-sm">DAY 3 • WED</div>
-                        <div class="text-2xl font-bold">Jul 1</div>
-                    </div>
-                    <i class="fas fa-island-tropical text-4xl text-[#00e5ff]"></i>
-                </div>
-                <div class="mt-4">
-                    <div class="font-bold text-[#00e5ff]">PERFECT DAY COCOCAY</div>
-                    <div class="text-sm">7:00 AM – <span class="font-bold">5:00 PM</span></div>
-                </div>
-                <div class="text-xs mt-3 text-[#00e5ff]">★ HIGHLIGHT DAY ★</div>
-                <div class="mt-1 text-xs">7 beaches • 14 slides • Zipline</div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <div class="text-[#ff6b00] font-black text-sm">DAY 4 • THU</div>
-                        <div class="text-2xl font-bold">Jul 2</div>
-                    </div>
-                    <i class="fas fa-water text-4xl text-[#00e5ff]"></i>
-                </div>
-                <div class="mt-4">
-                    <div class="font-semibold">Day at Sea</div>
-                    <div class="text-sm text-gray-400">All day on Utopia</div>
-                </div>
-                <div class="mt-4 text-xs">
-                    <div>• FlowRider + 17 slides</div>
-                    <div>• AquaTheater shows</div>
-                    <div>• Full ship exploration</div>
-                </div>
-            </div>
-
-            <!-- Day 5 -->
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <div class="text-[#ff6b00] font-black text-sm">DAY 5 • FRI</div>
-                        <div class="text-2xl font-bold">Jul 3</div>
-                    </div>
-                    <i class="fas fa-home text-4xl text-[#00e5ff]"></i>
-                </div>
-                <div class="mt-4">
-                    <div class="font-semibold">Port Canaveral</div>
-                    <div class="text-sm">Arrives <span class="font-bold">6:00 AM</span></div>
-                </div>
-                <div class="mt-4 text-xs text-gray-400">Disembark after breakfast. Parking checkout.</div>
-            </div>
-        </div>
-
-        <!-- Detailed Timeline Image -->
-        <div class="mt-8">
-            <img src="https://v3b.fal.media/files/b/0a9fdd64/7xQChAUXBqsU9nToIaaNQ_N2IHyjNJ.png" 
-                 alt="Detailed Cruise Timeline" class="w-full rounded-3xl infographic-img">
-        </div>
-    </div>
-
-    <!-- SHIP STATS + NEIGHBORHOODS -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12">
-        <h2 class="text-4xl font-black heading-font mb-8">The Ship • 236k Tons of Awesome</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <div>
-                <img src="https://v3b.fal.media/files/b/0a9fdd67/304G000e9w4_njYkYyxgL_qtM7tpKL.png" 
-                     alt="Onboard Highlights" class="w-full rounded-3xl infographic-img mb-6">
-            </div>
-            
-            <div class="infographic-section rounded-3xl p-8 space-y-6">
+          </div>
+          <div class="day-grid">
+            <div class="day-card">
+              <div class="day-top">
                 <div>
-                    <div class="uppercase text-xs tracking-widest mb-2 text-gray-400">KEY SPECS</div>
-                    <div class="grid grid-cols-2 gap-y-4">
-                        <div><span class="font-bold">Length:</span> 1,188 ft</div>
-                        <div><span class="font-bold">Decks:</span> 18 (16 passenger)</div>
-                        <div><span class="font-bold">Staterooms:</span> 2,834</div>
-                        <div><span class="font-bold">Crew:</span> 2,290</div>
-                        <div><span class="font-bold">Max Capacity:</span> ~7,958</div>
-                        <div><span class="font-bold">Maiden:</span> 2024</div>
-                    </div>
+                  <div class="day-label">Day 1</div>
+                  <div class="day-date">Mon Jun 29</div>
                 </div>
-                
+                <span class="time-pill">Depart 4:00 PM</span>
+              </div>
+              <div class="day-port">Port Canaveral embarkation</div>
+              <div class="day-tip">Assigned terminal arrival time matters more than “show up early.” Best move on a short sailing: board, connect to the app, confirm reservations, then hit slides, pools, or ship photos before the crowd fully loads in.</div>
+            </div>
+            <div class="day-card">
+              <div class="day-top">
                 <div>
-                    <div class="uppercase text-xs tracking-widest mb-3 text-gray-400">SIGNATURE NEIGHBORHOODS</div>
-                    <div class="flex flex-wrap gap-2 text-sm">
-                        <div class="bg-white/5 px-3 py-1 rounded-full">Royal Promenade</div>
-                        <div class="bg-white/5 px-3 py-1 rounded-full">Central Park</div>
-                        <div class="bg-white/5 px-3 py-1 rounded-full">Boardwalk</div>
-                        <div class="bg-white/5 px-3 py-1 rounded-full">AquaTheater</div>
-                        <div class="bg-white/5 px-3 py-1 rounded-full">Surfside</div>
-                    </div>
+                  <div class="day-label">Day 2</div>
+                  <div class="day-date">Tue Jun 30</div>
                 </div>
+                <span class="time-pill">9:00 AM to 5:30 PM</span>
+              </div>
+              <div class="day-port">Nassau, Bahamas</div>
+              <div class="day-tip">The new high-focus choice is Royal Beach Club Paradise Island. DIY alternatives still work if you want Atlantis, Junkanoo, or a quick downtown stop instead of an all-day club pass.</div>
             </div>
-        </div>
-    </div>
-
-    <!-- PERFECT DAY COCOCAY -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12" id="cococay">
-        <h2 class="text-5xl font-black heading-font mb-2">Perfect Day at CocoCay</h2>
-        <p class="text-[#00e5ff] text-xl mb-6">The undisputed highlight. 7:00 AM – 5:00 PM</p>
-        
-        <img src="https://v3b.fal.media/files/b/0a9fdd65/tblVhhiWIVfGZP1wVuVUa_h14UO6EK.png" 
-             alt="CocoCay Infographic" class="w-full rounded-3xl infographic-img mb-8">
-        
-        <div class="grid md:grid-cols-3 gap-5">
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="font-bold text-lg mb-4 flex items-center gap-2"><i class="fas fa-umbrella-beach text-[#00e5ff]"></i> FREE ZONES</div>
-                <ul class="space-y-2 text-sm">
-                    <li>• <strong>Oasis Lagoon</strong> – Largest freshwater pool in the Bahamas</li>
-                    <li>• Chill Island</li>
-                    <li>• South Beach</li>
-                    <li>• 7 total beaches</li>
-                </ul>
-            </div>
-            <div class="infographic-section rounded-3xl p-6 border border-[#ff6b00]/40">
-                <div class="font-bold text-lg mb-4 flex items-center gap-2 text-[#ff6b00]"><i class="fas fa-dollar-sign"></i> PAID EXPERIENCES</div>
-                <ul class="space-y-2 text-sm">
-                    <li>• <strong>Thrill Waterpark</strong> – Tallest slide in Caribbean</li>
-                    <li>• <strong>Coco Beach Club</strong> – Infinity pool + overwater cabanas</li>
-                    <li>• <strong>Hideaway Beach</strong> – Adults-only (21+)</li>
-                    <li>• Overwater Cabanas, Helium Balloon, Jet Skis</li>
-                </ul>
-            </div>
-            <div class="infographic-section rounded-3xl p-6">
-                <div class="font-bold text-lg mb-4">PRO TIPS</div>
-                <ul class="space-y-2 text-sm">
-                    <li>✓ Arrive early for best chairs</li>
-                    <li>✓ Book cabana in advance for groups</li>
-                    <li>✓ Snorkel gear + BBQ included in many packages</li>
-                    <li>✓ Tram runs frequently</li>
-                    <li>✓ Return to ship by 4:30 PM latest</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- NASSAU -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12" id="nassau">
-        <h2 class="text-4xl font-black heading-font mb-6">Nassau Port Day</h2>
-        
-        <img src="https://v3b.fal.media/files/b/0a9fdd67/K8vJto5hdlfBDXlqaGNu4_AKO6LIfs.png" 
-             alt="Nassau Guide" class="w-full rounded-3xl infographic-img mb-6">
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="infographic-section p-7 rounded-3xl">
-                <div class="font-bold mb-3">TOP RECOMMENDATION</div>
-                <div class="text-2xl font-semibold">Royal Beach Club Paradise Island</div>
-                <div class="text-sm mt-2">All-inclusive day pass with three neighborhoods:</div>
-                <ul class="mt-4 space-y-1 text-sm">
-                    <li><strong>Party Cove</strong> — World’s largest swim-up bar, Floating Flamingo, DJs</li>
-                    <li><strong>Paradise Beach</strong> — White sand, live music</li>
-                    <li><strong>Chill Beach</strong> — Family-friendly pools</li>
-                </ul>
-            </div>
-            <div class="infographic-section p-7 rounded-3xl">
-                <div class="text-sm mb-3 font-semibold text-gray-400">OTHER OPTIONS</div>
-                <div class="space-y-3 text-sm">
-                    <div>• Atlantis day pass (resort)</div>
-                    <div>• Junkanoo Beach (public, short walk)</div>
-                    <div>• Cable Beach (taxi)</div>
-                    <div class="pt-2 border-t border-white/10">Book excursions or day passes <span class="text-[#ff6b00]">before sailing</span></div>
+            <div class="day-card">
+              <div class="day-top">
+                <div>
+                  <div class="day-label">Day 3</div>
+                  <div class="day-date">Wed Jul 1</div>
                 </div>
+                <span class="time-pill">Planned 7:00 AM to 5:00 PM</span>
+              </div>
+              <div class="day-port">Perfect Day at CocoCay</div>
+              <div class="day-tip">This is the headline port for most recent cruisers. Early disembarkation gets the best beach or pool setup. Beverage and Wi-Fi packages extend onto the island.</div>
             </div>
+            <div class="day-card">
+              <div class="day-top">
+                <div>
+                  <div class="day-label">Day 4 / Day 5</div>
+                  <div class="day-date">Thu Jul 2 / Fri Jul 3</div>
+                </div>
+                <span class="time-pill">Sea day • home 6:00 AM</span>
+              </div>
+              <div class="day-port">Full ship day, then disembark</div>
+              <div class="day-tip">Use the sea day for headliner shows, specialty dining, Solarium downtime, and anything you skipped on embarkation day. Settle the account and set luggage out the final night if using tags.</div>
+            </div>
+          </div>
         </div>
-    </div>
 
-    <!-- DINING & BARS -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12" id="dining">
-        <h2 class="text-4xl font-black heading-font mb-6">Dining &amp; Bars • Eat Like a King</h2>
-        
-        <img src="https://v3b.fal.media/files/b/0a9fdd71/S3-2Qa-bxXGlIhVn2YQYy_JHDMjAei.png" 
-             alt="Dining &amp; Bars" class="w-full rounded-3xl infographic-img mb-8">
-        
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="card tint-coral coral-line">
+          <div class="card-head">
             <div>
-                <div class="uppercase text-xs text-[#00e5ff] mb-2 font-semibold">ALWAYS INCLUDED</div>
-                <div class="infographic-section rounded-3xl p-6 space-y-3 text-sm">
-                    <div>• <strong>Windjammer</strong> – Global buffet</div>
-                    <div>• <strong>Main Dining Room</strong> – 3-course rotating menus (My Time or fixed)</div>
-                    <div>• <strong>Sorrento’s Pizza</strong> – 24/7</div>
-                    <div>• <strong>El Loco Fresh</strong> – Mexican</div>
-                    <div>• <strong>Café Promenade</strong> – Coffee &amp; snacks</div>
-                    <div>• Park Café, Dog House, Sprinkles Ice Cream, The Spare Tire</div>
-                </div>
+              <div class="smallcaps coral">Embarkation logistics</div>
+              <h3>Port Canaveral quick hit</h3>
             </div>
-            
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ff7c57" d="M4 3h16v2H4V3zm2 4h12l1 6H5l1-6zm1 8h10l2 6H5l2-6z"/></svg>
+            </div>
+          </div>
+          <ul class="mini-list tight">
+            <li><strong>Cruise Terminal 1:</strong> Utopia is scheduled at CT1 for this homeport run.</li>
+            <li><strong>Parking:</strong> Port Canaveral lists cruise parking at $20 per day plus tax, paid on entry.</li>
+            <li><strong>Arrival strategy:</strong> follow your assigned boarding time rather than guessing a walk-up window.</li>
+            <li><strong>Bring:</strong> travel docs, app login, luggage tags, swimwear in carry-on, and any beach-day extras you want before bags arrive.</li>
+          </ul>
+          <div class="pill-row">
+            <div class="pill">Check-in + docs</div>
+            <div class="pill">Porter tipping cash</div>
+            <div class="pill">Pool gear in carry-on</div>
+            <div class="pill">Airplane mode on</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card tint-mint mint-line">
+          <div class="card-head">
             <div>
-                <div class="uppercase text-xs text-[#ff6b00] mb-2 font-semibold">SPECIALTY (extra cost)</div>
-                <div class="infographic-section rounded-3xl p-6 space-y-3 text-sm">
-                    <div>• Chops Grille (steakhouse)</div>
-                    <div>• Giovanni’s Italian Kitchen</div>
-                    <div>• Izumi Hibachi &amp; Sushi</div>
-                    <div>• Hooked Seafood</div>
-                    <div>• 150 Central Park, The Mason Jar, Chef’s Table</div>
-                    <div>• Playmakers, Sugar Beach, Royal Railway</div>
-                </div>
+              <div class="smallcaps mint">Nassau focus</div>
+              <h3>Royal Beach Club advantage</h3>
             </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#1e8d80" d="M12 2c2.2 0 4 1.8 4 4 0 1.4-.7 2.7-1.9 3.4L18 22h-2l-1.4-5h-5.2L8 22H6l3.9-12.6A4 4 0 0 1 8 6c0-2.2 1.8-4 4-4zm0 2a2 2 0 0 0 0 4 2 2 0 0 0 0-4z"/></svg>
+            </div>
+          </div>
+          <div class="postcard">
+            <svg viewBox="0 0 320 118" aria-hidden="true">
+              <rect x="0" y="0" width="320" height="118" rx="18" fill="#dff7fc"/>
+              <rect x="0" y="74" width="320" height="44" rx="18" fill="#90ddea"/>
+              <circle cx="48" cy="29" r="15" fill="#f9c564"/>
+              <rect x="178" y="36" width="102" height="18" rx="9" fill="#ffffff" opacity="0.8"/>
+              <rect x="188" y="56" width="112" height="26" rx="13" fill="#ffffff" opacity="0.86"/>
+              <rect x="102" y="57" width="46" height="23" rx="11.5" fill="#1e8d80"/>
+              <rect x="126" y="49" width="46" height="31" rx="15.5" fill="#1e8d80"/>
+              <rect x="74" y="66" width="56" height="9" rx="4.5" fill="#ff7c57"/>
+              <rect x="194" y="58" width="12" height="20" rx="4" fill="#43c5dc"/>
+              <rect x="212" y="58" width="12" height="20" rx="4" fill="#43c5dc"/>
+              <rect x="230" y="58" width="12" height="20" rx="4" fill="#43c5dc"/>
+              <path d="M34 92c27-7 54-7 81 0 24 5 48 5 72 0 28-7 55-7 82 0 18 4 34 4 51 0" fill="none" stroke="#ffffff" stroke-opacity="0.72" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Opened December 2025:</strong> this is the newest Nassau-specific Royal Caribbean product on your route.</li>
+            <li><strong>Included with pass:</strong> complimentary boat transfer, Wi-Fi, loungers, umbrellas, towels, lockers, showers, and all-day dining.</li>
+            <li><strong>Three neighborhoods:</strong> Party Cove, Paradise Beach, and Chill Beach, each anchored by a pool and its own swim-up or nearby bars.</li>
+            <li><strong>Scale:</strong> 3 pools, 2 beaches, 10 bars, 3 dining spots, and about 30 cabanas.</li>
+          </ul>
+          <div class="note-box">If you skip the club, Nassau still accepts U.S. dollars broadly and many local restaurants add a 15% service charge automatically.</div>
         </div>
-        
-        <div class="mt-6 text-sm text-gray-400">Pro move: Book specialty dining and drink packages before you sail for best prices. Use the Royal Caribbean app for menus and reservations.</div>
+
+        <div class="card tint-blue">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps">CocoCay plan</div>
+              <h3>Free core + paid upgrades</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#0387b7" d="M12 2c2.2 0 4 1.8 4 4 0 1.5-.8 2.8-2 3.5V22h-2V9.5A4 4 0 0 1 8 6c0-2.2 1.8-4 4-4zM8 21H6c0-4 2-7 6-7v2c-2.8 0-4 2.2-4 5zm10 0h-2c0-2.8-1.2-5-4-5v-2c4 0 6 3 6 7z"/></svg>
+            </div>
+          </div>
+          <div class="split">
+            <div>
+              <div class="smallcaps">Included</div>
+              <ul class="bullet-list tight" style="margin-top:8px">
+                <li>Oasis Lagoon, Chill Island, South Beach, tram system, and standard beaches.</li>
+                <li>Snack Shack and island dining in core areas.</li>
+                <li>Ship beverage and Wi-Fi packages work here.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="smallcaps coral">Upgrade path</div>
+              <ul class="mini-list tight" style="margin-top:8px">
+                <li>Hideaway Beach for adults-only energy.</li>
+                <li>Thrill Waterpark, Coco Beach Club, balloon, or cabanas.</li>
+                <li>Best premium inventory usually disappears first.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-box">Recent cruiser advice repeats one theme: get off the ship early here if beach chairs, short waterslide lines, or a calm adults-only start matter to you.</div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card tint-coral coral-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps coral">What moves around</div>
+              <h3>Locked vs variable</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ff7c57" d="M12 2l3 4h-2v6h-2V6H9l3-4zm-7 12h14v2H5v-2zm2 4h10v2H7v-2z"/></svg>
+            </div>
+          </div>
+          <div class="legend">
+            <div class="legend-row">
+              <div class="legend-label">Locked now</div>
+              <div class="legend-copy"><strong>Itinerary, terminal, ship lineup, port sequence.</strong> These are already published and stable enough to plan around.</div>
+            </div>
+            <div class="legend-row">
+              <div class="legend-label">Usually variable</div>
+              <div class="legend-copy"><strong>Show times, trivia slots, MDR theme order.</strong> The Royal app and My Royal Cruise are the source of truth as sailing day gets closer.</div>
+            </div>
+            <div class="legend-row">
+              <div class="legend-label">Unavailable yet</div>
+              <div class="legend-copy"><strong>Contest winners or “results.”</strong> This specific cruise has not departed yet, so no one has won anything on this sailing as of June 27, 2026.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tint-mint mint-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps mint">Fast takeaways</div>
+              <h3>Best use of four nights</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#1e8d80" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5v5.6l4 2.4-1 1.7-5-3V7h2z"/></svg>
+            </div>
+          </div>
+          <ul class="bullet-list tight">
+            <li><strong>Embarkation afternoon:</strong> knock out slides, pools, and ship photos before the crowd thickens.</li>
+            <li><strong>Nassau:</strong> decide in advance whether you want the club, Atlantis-style resort time, or a short city stop.</li>
+            <li><strong>CocoCay:</strong> treat it like a must-win day, because most recent cruiser chatter does.</li>
+            <li><strong>Sea day night:</strong> reserve one premium dinner or one headliner show instead of trying to do everything.</li>
+          </ul>
+          <div class="pill-row">
+            <div class="pill">Aqua show</div>
+            <div class="pill">Mason Jar brunch</div>
+            <div class="pill">Royal Railway</div>
+            <div class="pill">Hideaway or pool deck</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- INSIDER TIPS + HACKS -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12" id="tips">
-        <h2 class="text-4xl font-black heading-font mb-6">Insider Hacks &amp; Secrets</h2>
-        
-        <img src="https://v3b.fal.media/files/b/0a9fdd71/dtBCwH4Vm8Mwtk99e2PN5_ROmj1xHx.png" 
-             alt="Insider Tips" class="w-full rounded-3xl infographic-img mb-8">
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">BOARDING STRATEGY</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Arrive at terminal 2–3 hours early</li>
-                    <li>• Download app &amp; check in online</li>
-                    <li>• Use luggage porters at port</li>
-                </ul>
-            </div>
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">MONEY SAVERS</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Bring a reusable water bottle (fill at stations)</li>
-                    <li>• Free shows + entertainment everywhere</li>
-                    <li>• Compare drink package vs. a la carte</li>
-                    <li>• Book excursions directly when possible</li>
-                </ul>
-            </div>
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">SECRET SPOTS</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Quiet decks forward or aft early morning</li>
-                    <li>• Solarium Bar (adults)</li>
-                    <li>• Hidden nooks in Central Park</li>
-                    <li>• Best FlowRider times = off-peak</li>
-                </ul>
-            </div>
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">DUCK HUNT &amp; FUN</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Hide &amp; seek rubber ducks across ship</li>
-                    <li>• Daily trivia, contests, bingo</li>
-                    <li>• Casino Royale tournaments</li>
-                    <li>• Photo ops with characters</li>
-                </ul>
-            </div>
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">PACKING MUSTS</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Reef-safe sunscreen</li>
-                    <li>• Power bank + multi-USB</li>
-                    <li>• Waterproof phone pouch</li>
-                    <li>• Light jacket for sea days/AC</li>
-                    <li>• Formal night optional (smart casual works)</li>
-                </ul>
-            </div>
-            <div class="tip-box rounded-3xl p-6">
-                <div class="font-semibold text-[#ff6b00] mb-2">PORT CANAVERAL</div>
-                <ul class="text-sm space-y-1">
-                    <li>• Parking: ~$20/day (garage right there)</li>
-                    <li>• No reservations needed</li>
-                    <li>• Pre-cruise: Kennedy Space Center</li>
-                    <li>• Arrive early = less stress</li>
-                </ul>
-            </div>
-        </div>
+    <div class="footer-band">
+      <div>
+        <h4>Freshness</h4>
+        <p>Research checked on June 27, 2026. This file is tuned for the exact June 29 to July 3, 2026 departure, not a generic Utopia template.</p>
+      </div>
+      <div>
+        <h4>Best planning tools</h4>
+        <p>Royal app for schedules and menus, My Royal Cruise for reservations, and the port arrival guide for terminal timing and parking.</p>
+      </div>
+      <div>
+        <h4>Reality check</h4>
+        <p>Weather, app-posted schedules, standby queues, and contest outcomes can still move. Build around the route, then verify the rest once the cruise goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="hero" style="min-height: 1.6in; grid-template-columns: 1.35fr 1fr; padding-top:0.28in; padding-bottom:0.28in;">
+      <div>
+        <div class="kicker"><span>Shipboard strategy</span><span>What to eat, book, and prioritize</span></div>
+        <h2 class="heading" style="font-size:34px">Your onboard<br>game plan</h2>
+        <div class="subheading" style="max-width: 8in;">This sailing is short by design, so the winners are the people who pick a few high-demand moments early: one headline show, one standout meal, one port upgrade if it fits, and one calm fallback zone.</div>
+      </div>
+      <div class="hero-art">
+        <svg class="ship-line" viewBox="0 0 420 170" aria-hidden="true">
+          <rect x="28" y="86" width="364" height="34" rx="17" fill="rgba(255,255,255,0.16)"/>
+          <rect x="62" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <rect x="116" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <rect x="170" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <rect x="224" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <rect x="278" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <rect x="332" y="98" width="40" height="10" rx="5" fill="#fff" opacity="0.88"/>
+          <circle cx="75" cy="44" r="20" fill="rgba(255,255,255,0.18)"/>
+          <circle cx="140" cy="44" r="20" fill="rgba(255,255,255,0.18)"/>
+          <circle cx="205" cy="44" r="20" fill="rgba(255,255,255,0.18)"/>
+          <circle cx="270" cy="44" r="20" fill="rgba(255,255,255,0.18)"/>
+          <circle cx="335" cy="44" r="20" fill="rgba(255,255,255,0.18)"/>
+          <text x="75" y="50" text-anchor="middle" font-size="10" font-weight="700" font-family="Liberation Sans" fill="#fff">DINE</text>
+          <text x="140" y="50" text-anchor="middle" font-size="10" font-weight="700" font-family="Liberation Sans" fill="#fff">SHOW</text>
+          <text x="205" y="50" text-anchor="middle" font-size="10" font-weight="700" font-family="Liberation Sans" fill="#fff">PLAY</text>
+          <text x="270" y="50" text-anchor="middle" font-size="10" font-weight="700" font-family="Liberation Sans" fill="#fff">PORT</text>
+          <text x="335" y="50" text-anchor="middle" font-size="10" font-weight="700" font-family="Liberation Sans" fill="#fff">WIFI</text>
+        </svg>
+      </div>
     </div>
 
-    <!-- QUICK REFERENCE -->
-    <div class="max-w-screen-xl mx-auto px-6 pb-12" id="quickref">
-        <h2 class="text-4xl font-black heading-font mb-6">Quick Reference</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="infographic-section rounded-3xl p-7">
-                <div class="text-lg font-bold mb-4">Key Times</div>
-                <div class="space-y-2 text-sm">
-                    <div class="flex justify-between data-row py-1.5"><span>Day 1 Depart</span> <span class="font-mono">4:00 PM</span></div>
-                    <div class="flex justify-between data-row py-1.5"><span>Nassau</span> <span class="font-mono">9:00 AM – 5:30 PM</span></div>
-                    <div class="flex justify-between data-row py-1.5"><span>CocoCay</span> <span class="font-mono">7:00 AM – 5:00 PM</span></div>
-                    <div class="flex justify-between data-row py-1.5"><span>Sea Day</span> <span class="font-mono">All day</span></div>
-                    <div class="flex justify-between py-1.5"><span>Arrive Home</span> <span class="font-mono">6:00 AM Jul 3</span></div>
-                </div>
+    <div class="layout" style="grid-template-columns: 1.02fr 0.98fr 0.98fr;">
+      <div class="stack">
+        <div class="card tint-blue">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps">Dining radar</div>
+              <h3>Included vs premium meals</h3>
             </div>
-            
-            <div class="infographic-section rounded-3xl p-7">
-                <div class="text-lg font-bold mb-4">Important Notes</div>
-                <ul class="text-sm space-y-2">
-                    <li>✓ English / USD at all ports</li>
-                    <li>✓ Royal Caribbean app is your best friend</li>
-                    <li>✓ Verify final show times in app onboard</li>
-                    <li>✓ 15% service charge common in Nassau restaurants</li>
-                    <li>✓ Bring travel documents &amp; passport</li>
-                    <li>✓ This is an unofficial fan guide</li>
-                </ul>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#0387b7" d="M7 2h2v8a3 3 0 1 1-2 0V2zm8 0h2v6h2v2h-2v12h-2V2z"/></svg>
             </div>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-col">
+              <h4>Included anchors</h4>
+              <ul class="bullet-list tight">
+                <li><strong>Windjammer:</strong> brunches, carving stations, and international theme nights.</li>
+                <li><strong>Main Dining Room:</strong> rotating nightly menus; the app is the only reliable last-mile menu source.</li>
+                <li><strong>Sorrento’s + Cafe Promenade:</strong> dependable late-night and between-show fuel.</li>
+                <li><strong>El Loco Fresh, Park Cafe, Dog House, Sprinkles:</strong> casual speed plays on a short itinerary.</li>
+              </ul>
+            </div>
+            <div class="menu-col">
+              <h4>Premium targets</h4>
+              <ul class="mini-list tight">
+                <li><strong>Royal Railway:</strong> five-course Wild West dinner; recent reviews call out short ribs and the gold bar dessert.</li>
+                <li><strong>Mason Jar:</strong> Southern comfort standout; brunch is one of the ship’s biggest repeat recommendations.</li>
+                <li><strong>Hooked:</strong> oysters, crab cakes, lobster rolls, raw bar style hits.</li>
+                <li><strong>Giovanni’s, Chops, Izumi:</strong> safest specialty picks if you want classic Royal favorites.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-box">If you only book one extra meal on this sailing, the highest chatter belongs to Royal Railway for novelty and Mason Jar for brunch comfort. Everything else is preference-driven.</div>
         </div>
-        
-        <div class="mt-8 text-center text-xs text-gray-500">
-            Made for the June 29 – July 3 2026 sailing • All info researched from official Royal Caribbean sources &amp; cruiser reports • Always double-check in the app
+
+        <div class="card tint-coral coral-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps coral">Menu intelligence</div>
+              <h3>What the menus really mean</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ff7c57" d="M4 4h16v2H4V4zm2 4h12v12H6V8zm2 2v2h8v-2H8zm0 4v2h5v-2H8z"/></svg>
+            </div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>MDR menus rotate and can shift by itinerary:</strong> do not lock your dinner plan until the Royal app shows the live nightly menu.</li>
+            <li><strong>Specialty menus are more stable:</strong> Chops, Giovanni’s, Hooked, and Izumi tend to be consistent enough to reserve ahead.</li>
+            <li><strong>Windjammer is stronger than many first-timers expect:</strong> Royal markets over 200 dishes across its nighttime buffet experience.</li>
+            <li><strong>Short-sailing rule:</strong> a good included breakfast plus one deliberately chosen premium meal usually beats overbooking packages.</li>
+          </ul>
         </div>
+      </div>
+
+      <div class="stack">
+        <div class="card tint-mint mint-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps mint">Entertainment</div>
+              <h3>Named headliners and nightlife</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#1e8d80" d="M9 3h6v10a6 6 0 1 1-6 0V3zm2 2v8.3l-1 .6A4 4 0 1 0 14 13.9l-1-.6V5h-2z"/></svg>
+            </div>
+          </div>
+          <div class="show-list">
+            <div class="show-item">
+              <div class="show-type">Water</div>
+              <div class="show-copy"><strong>Aqua80Too</strong> The signature AquaTheater production and the most consistently praised named show in recent cruiser reviews.</div>
+            </div>
+            <div class="show-item">
+              <div class="show-type">Ice</div>
+              <div class="show-copy"><strong>Youtopia</strong> Utopia’s ice spectacle, pitched by Royal as an odyssey through “ideal perfection.”</div>
+            </div>
+            <div class="show-item">
+              <div class="show-type">Stage</div>
+              <div class="show-copy"><strong>All In!</strong> Main-theater headline show; bookable timing can be tighter on short sailings.</div>
+            </div>
+            <div class="show-item">
+              <div class="show-type">Nightlife</div>
+              <div class="show-copy"><strong>Royal Comedians, Spotlight Karaoke, Music Hall, Boleros, Bell &amp; Barley, Pesky Parrot, Playmakers</strong> are the most repeat-mentioned adult after-dark anchors.</div>
+            </div>
+          </div>
+          <div class="note-box">Royal says show listings, days, times, and descriptions live in My Royal Cruise or the Royal app. If reservations look picked over, keep checking and plan for standby.</div>
+        </div>
+
+        <div class="card tint-blue">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps">Games and contests</div>
+              <h3>What is likely, and what is not knowable yet</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#0387b7" d="M7 2h10v4h3v4a5 5 0 0 1-5 5h-1v2h4v2H6v-2h4v-2H9a5 5 0 0 1-5-5V6h3V2zm2 2v2h6V4H9zm-3 4v2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8H6z"/></svg>
+            </div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Likely recurring events:</strong> trivia, bingo, game shows, karaoke, casino tournaments, and adults-only Crazy Quest style scavenger hunt activity.</li>
+            <li><strong>Frequently reported fun extras:</strong> the unofficial rubber duck hiding scene and crowd-pleasing pool contests such as World’s Sexiest Man.</li>
+            <li><strong>Results status:</strong> no contest winners, trivia answers, or sailing-specific results exist yet for this departure.</li>
+          </ul>
+          <div class="callout"><strong>Planning implication:</strong> pack the attitude, not the answer key. Use the app once onboard for the real contest slate, then decide whether you want to participate or just watch the chaos.</div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card tint-coral coral-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps coral">Recent cruiser trends</div>
+              <h3>What people keep asking about</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ff7c57" d="M10 2a8 8 0 1 1-5.3 14l-2.9 2.9-1.4-1.4 2.9-2.9A8 8 0 0 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm8.7 13.3L24 22l-1.4 1.4-5.3-5.3 1.4-1.4z"/></svg>
+            </div>
+          </div>
+          <div class="trend-grid">
+            <div class="trend-row">
+              <div class="trend-label">Show reservations</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 94%;"></div></div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-label">CocoCay strategy</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 92%;"></div></div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-label">Mason Jar brunch</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 86%;"></div></div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-label">Royal Railway value</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 81%;"></div></div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-label">Internet package</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 79%;"></div></div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-label">Crowd timing hacks</div>
+              <div class="trend-bar"><div class="trend-fill" style="width: 75%;"></div></div>
+            </div>
+          </div>
+          <div class="note-box">Interpretation of recent chatter: cruisers treat Utopia’s short sailings like a sprint, not a sampler. The most loved moves are early-day crowd avoidance, a tight show plan, and not overcommitting dinner reservations.</div>
+        </div>
+
+        <div class="card tint-mint mint-line">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps mint">Tech + packing</div>
+              <h3>High-utility prep list</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#1e8d80" d="M7 3h10l4 4v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2zm1 2v3h8V5H8zm1 7h6v2H9v-2zm0 4h6v2H9v-2z"/></svg>
+            </div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Phone setup:</strong> plan on airplane mode at sea and decide on internet ahead of time if you want dependable connectivity.</li>
+            <li><strong>Port bag:</strong> passport/docs, sunscreen, swimsuit, towel logic, charger, and a waterproof pouch matter more than formalwear on this route.</li>
+            <li><strong>Adults-only fallback:</strong> Solarium is the calm backup when the open decks feel too busy.</li>
+            <li><strong>Join the sailing community:</strong> recent cruisers repeatedly recommend date-specific social groups for last-minute meetups and answer sharing.</li>
+          </ul>
+        </div>
+
+        <div class="card tint-blue">
+          <div class="card-head">
+            <div>
+              <div class="smallcaps">Decision summary</div>
+              <h3>If you only act on five things</h3>
+            </div>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#0387b7" d="M12 2l2.4 4.9L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-.1L12 2z"/></svg>
+            </div>
+          </div>
+          <ul class="bullet-list">
+            <li>Open the Royal app the moment your sailing data is live and re-check it often.</li>
+            <li>Use embarkation afternoon for high-line activities rather than lounging inside.</li>
+            <li>Decide now whether Nassau is a beach-club day or a quick-port day.</li>
+            <li>Treat CocoCay as a primary event, not filler between ship days.</li>
+            <li>Pick one headline meal and one headline show instead of trying to win the whole ship.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <script>
-        // Tailwind script
-        function initializeTailwind() {
-            // Any dynamic JS if needed
-            console.log('%c[Utopia MAX Guide] Badass infographic loaded', 'color:#00e5ff');
-        }
-        
-        window.onload = function() {
-            initializeTailwind();
-        }
-        
-        // Keyboard nav hint
-        document.addEventListener('keydown', function(e) {
-            if (e.key === "/") {
-                const firstSection = document.getElementById('itinerary');
-                if (firstSection) firstSection.scrollIntoView({ behavior: 'smooth' });
-                e.preventDefault();
-            }
-        });
-    </script>
+    <div class="footer-band">
+      <div>
+        <h4>Source base</h4>
+        <p class="sources">Repo content reviewed alongside Royal Caribbean itinerary, ship dining, entertainment, and Royal Beach Club pages; Port Canaveral schedule and parking pages; CruiseMapper; and recent cruiser discussions/reviews checked on June 27, 2026.</p>
+      </div>
+      <div>
+        <h4>What changed in this build</h4>
+        <p class="sources">This version is self-contained for print, strips remote dependencies, separates confirmed facts from likely recurring patterns, and explicitly marks contest results as unavailable pre-sailing.</p>
+      </div>
+      <div>
+        <h4>Use this guide correctly</h4>
+        <p class="sources">Plan from this document today, then confirm the app for live timings, menus, and reservations once the June 29, 2026 sailing fully opens.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

@@ -1,41 +1,27 @@
-# Utopia of the Seas MAX Guide
+# Utopia of the Seas Sailing Brief
 
-Exact sailing guide for the June 29, 2026 to July 3, 2026 Utopia of the Seas cruise from Port Canaveral.
+Professional, print-ready infographic package for the exact **June 29, 2026 to July 3, 2026** Utopia of the Seas sailing from **Port Canaveral**.
 
-## Deliverables
+## Files
 
-The repo now includes:
+- `utopia-max-infographic.html` - self-contained infographic source with no CDN or remote image dependency
+- `generate_pdf.py` - local Chromium export script
+- `Utopia_of_the_Seas_MAX_Guide_Final.pdf` - primary two-page tabloid PDF output
+- `final.pdf` - mirror copy of the primary PDF for convenience
 
-- `utopia-of-the-seas-infographic.jpg` - a tall visual infographic version
-- `infographic-jpg/utopia-of-the-seas-infographic.jpg` - the same infographic packaged in its own folder
-- `infographic.html` - the infographic source
-- the earlier 10-page JPG set:
+## Coverage
 
-- `01-cover-itinerary.jpg`
-- `02-schedule-days-1-2.jpg`
-- `03-schedule-days-3-4.jpg`
-- `04-secret-spots.jpg`
-- `05-ship-map.jpg`
-- `06-dining-guide.jpg`
-- `07-insider-tips.jpg`
-- `08-contests-games.jpg`
-- `09-port-days.jpg`
-- `10-quick-reference.jpg`
+- exact sailing itinerary and route flow
+- Port Canaveral embarkation notes
+- Nassau strategy, including Royal Beach Club Paradise Island
+- Perfect Day at CocoCay planning
+- dining and menu strategy
+- headline entertainment, nightlife, and recurring game/contest patterns
+- recent cruiser planning trends and packing/tech guidance
+- clear separation between confirmed facts, likely recurring patterns, and items that remain variable until the app goes live
 
-It also includes `index.html` if you want the same content in one browser-friendly guide.
+## Important notes
 
-## What is covered
-
-- Exact itinerary for the June 29 to July 3 sailing
-- Maximized daily schedule
-- Ship map and secret spots
-- Dining guide
-- Insider tips and money-saving hacks
-- Contests, duck hunt notes, and trivia angles
-- Nassau and CocoCay port planning
-- Quick-reference ship stats and key times
-
-## Notes
-
-- This is an unofficial fan guide.
-- Show times and onboard activities can shift, so verify final timings in the Royal Caribbean app once onboard.
+- This is an unofficial planning guide.
+- The sailing departs **June 29, 2026**, so sailing-specific contest winners/results do **not** exist yet as of the latest research pass.
+- Royal Caribbean app timings, live menus, standby queues, and weather can still shift. Reconfirm those last-mile details onboard.
