@@ -32,7 +32,7 @@ def main() -> int:
     browser = resolve_chromium()
     url = HTML_PATH.resolve().as_uri()
 
-    with tempfile.TemporaryDirectory(prefix="utopia-pdf-") as profile_dir:
+    with tempfile.TemporaryDirectory(prefix="utopia-pdf-", ignore_cleanup_errors=True) as profile_dir:
         cmd = [
             browser,
             "--headless=new",
@@ -57,7 +57,7 @@ def main() -> int:
                 cwd=REPO_DIR,
                 capture_output=True,
                 text=True,
-                timeout=25,
+                timeout=120,
             )
         except subprocess.TimeoutExpired:
             if not PDF_PATH.exists():
